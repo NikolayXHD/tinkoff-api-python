@@ -39,8 +39,7 @@ class CandlesResponse(object):
     def tracking_id(self, tracking_id):
         """Sets the tracking_id of this CandlesResponse.
 
-        :param tracking_id: The tracking_id of this CandlesResponse.
-        :type: str
+        :param str tracking_id: The tracking_id of this CandlesResponse.
         """
         if tracking_id is None:
             raise ValueError(
@@ -62,8 +61,7 @@ class CandlesResponse(object):
     def status(self, status):
         """Sets the status of this CandlesResponse.
 
-        :param status: The status of this CandlesResponse.
-        :type: str
+        :param str status: The status of this CandlesResponse.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -83,8 +81,7 @@ class CandlesResponse(object):
     def payload(self, payload):
         """Sets the payload of this CandlesResponse.
 
-        :param payload: The payload of this CandlesResponse.
-        :type: clients.tinkoff.models.Candles
+        :param clients.tinkoff.models.Candles payload: The payload of this CandlesResponse.
         """
         if payload is None:
             raise ValueError('Invalid value for `payload`, must not be `None`')

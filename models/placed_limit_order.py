@@ -72,8 +72,7 @@ class PlacedLimitOrder(object):
     def order_id(self, order_id):
         """Sets the order_id of this PlacedLimitOrder.
 
-        :param order_id: The order_id of this PlacedLimitOrder.
-        :type: str
+        :param str order_id: The order_id of this PlacedLimitOrder.
         """
         if order_id is None:
             raise ValueError(
@@ -118,8 +117,7 @@ class PlacedLimitOrder(object):
     def status(self, status):
         """Sets the status of this PlacedLimitOrder.
 
-        :param status: The status of this PlacedLimitOrder.
-        :type: clients.tinkoff.models.OrderStatus
+        :param clients.tinkoff.models.OrderStatus status: The status of this PlacedLimitOrder.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -139,8 +137,7 @@ class PlacedLimitOrder(object):
     def reject_reason(self, reject_reason):
         """Sets the reject_reason of this PlacedLimitOrder.
 
-        :param reject_reason: The reject_reason of this PlacedLimitOrder.
-        :type: str
+        :param str reject_reason: The reject_reason of this PlacedLimitOrder.
         """
 
         self._reject_reason = reject_reason
@@ -160,8 +157,7 @@ class PlacedLimitOrder(object):
         """Sets the message of this PlacedLimitOrder.
 
         Сообщение об ошибке
-        :param message: The message of this PlacedLimitOrder.
-        :type: str
+        :param str message: The message of this PlacedLimitOrder.
         """
 
         self._message = message
@@ -179,8 +175,7 @@ class PlacedLimitOrder(object):
     def requested_lots(self, requested_lots):
         """Sets the requested_lots of this PlacedLimitOrder.
 
-        :param requested_lots: The requested_lots of this PlacedLimitOrder.
-        :type: int
+        :param int requested_lots: The requested_lots of this PlacedLimitOrder.
         """
         if requested_lots is None:
             raise ValueError(
@@ -202,8 +197,7 @@ class PlacedLimitOrder(object):
     def executed_lots(self, executed_lots):
         """Sets the executed_lots of this PlacedLimitOrder.
 
-        :param executed_lots: The executed_lots of this PlacedLimitOrder.
-        :type: int
+        :param int executed_lots: The executed_lots of this PlacedLimitOrder.
         """
         if executed_lots is None:
             raise ValueError(
@@ -225,8 +219,7 @@ class PlacedLimitOrder(object):
     def commission(self, commission):
         """Sets the commission of this PlacedLimitOrder.
 
-        :param commission: The commission of this PlacedLimitOrder.
-        :type: clients.tinkoff.models.MoneyAmount
+        :param clients.tinkoff.models.MoneyAmount commission: The commission of this PlacedLimitOrder.
         """
 
         self._commission = commission

@@ -64,8 +64,7 @@ class CurrencyPosition(object):
     def balance(self, balance):
         """Sets the balance of this CurrencyPosition.
 
-        :param balance: The balance of this CurrencyPosition.
-        :type: float
+        :param float balance: The balance of this CurrencyPosition.
         """
         if balance is None:
             raise ValueError('Invalid value for `balance`, must not be `None`')
@@ -85,8 +84,7 @@ class CurrencyPosition(object):
     def blocked(self, blocked):
         """Sets the blocked of this CurrencyPosition.
 
-        :param blocked: The blocked of this CurrencyPosition.
-        :type: float
+        :param float blocked: The blocked of this CurrencyPosition.
         """
 
         self._blocked = blocked

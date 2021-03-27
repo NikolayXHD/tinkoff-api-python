@@ -58,8 +58,7 @@ class SandboxSetCurrencyBalanceRequest(object):
     def balance(self, balance):
         """Sets the balance of this SandboxSetCurrencyBalanceRequest.
 
-        :param balance: The balance of this SandboxSetCurrencyBalanceRequest.
-        :type: float
+        :param float balance: The balance of this SandboxSetCurrencyBalanceRequest.
         """
         if balance is None:
             raise ValueError('Invalid value for `balance`, must not be `None`')

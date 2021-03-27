@@ -39,8 +39,7 @@ class MarketInstrumentResponse(object):
     def tracking_id(self, tracking_id):
         """Sets the tracking_id of this MarketInstrumentResponse.
 
-        :param tracking_id: The tracking_id of this MarketInstrumentResponse.
-        :type: str
+        :param str tracking_id: The tracking_id of this MarketInstrumentResponse.
         """
         if tracking_id is None:
             raise ValueError(
@@ -62,8 +61,7 @@ class MarketInstrumentResponse(object):
     def status(self, status):
         """Sets the status of this MarketInstrumentResponse.
 
-        :param status: The status of this MarketInstrumentResponse.
-        :type: str
+        :param str status: The status of this MarketInstrumentResponse.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -83,8 +81,7 @@ class MarketInstrumentResponse(object):
     def payload(self, payload):
         """Sets the payload of this MarketInstrumentResponse.
 
-        :param payload: The payload of this MarketInstrumentResponse.
-        :type: clients.tinkoff.models.MarketInstrument
+        :param clients.tinkoff.models.MarketInstrument payload: The payload of this MarketInstrumentResponse.
         """
         if payload is None:
             raise ValueError('Invalid value for `payload`, must not be `None`')

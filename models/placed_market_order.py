@@ -72,8 +72,7 @@ class PlacedMarketOrder(object):
     def order_id(self, order_id):
         """Sets the order_id of this PlacedMarketOrder.
 
-        :param order_id: The order_id of this PlacedMarketOrder.
-        :type: str
+        :param str order_id: The order_id of this PlacedMarketOrder.
         """
         if order_id is None:
             raise ValueError(
@@ -118,8 +117,7 @@ class PlacedMarketOrder(object):
     def status(self, status):
         """Sets the status of this PlacedMarketOrder.
 
-        :param status: The status of this PlacedMarketOrder.
-        :type: clients.tinkoff.models.OrderStatus
+        :param clients.tinkoff.models.OrderStatus status: The status of this PlacedMarketOrder.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -139,8 +137,7 @@ class PlacedMarketOrder(object):
     def reject_reason(self, reject_reason):
         """Sets the reject_reason of this PlacedMarketOrder.
 
-        :param reject_reason: The reject_reason of this PlacedMarketOrder.
-        :type: str
+        :param str reject_reason: The reject_reason of this PlacedMarketOrder.
         """
 
         self._reject_reason = reject_reason
@@ -160,8 +157,7 @@ class PlacedMarketOrder(object):
         """Sets the message of this PlacedMarketOrder.
 
         Сообщение об ошибке
-        :param message: The message of this PlacedMarketOrder.
-        :type: str
+        :param str message: The message of this PlacedMarketOrder.
         """
 
         self._message = message
@@ -179,8 +175,7 @@ class PlacedMarketOrder(object):
     def requested_lots(self, requested_lots):
         """Sets the requested_lots of this PlacedMarketOrder.
 
-        :param requested_lots: The requested_lots of this PlacedMarketOrder.
-        :type: int
+        :param int requested_lots: The requested_lots of this PlacedMarketOrder.
         """
         if requested_lots is None:
             raise ValueError(
@@ -202,8 +197,7 @@ class PlacedMarketOrder(object):
     def executed_lots(self, executed_lots):
         """Sets the executed_lots of this PlacedMarketOrder.
 
-        :param executed_lots: The executed_lots of this PlacedMarketOrder.
-        :type: int
+        :param int executed_lots: The executed_lots of this PlacedMarketOrder.
         """
         if executed_lots is None:
             raise ValueError(
@@ -225,8 +219,7 @@ class PlacedMarketOrder(object):
     def commission(self, commission):
         """Sets the commission of this PlacedMarketOrder.
 
-        :param commission: The commission of this PlacedMarketOrder.
-        :type: clients.tinkoff.models.MoneyAmount
+        :param clients.tinkoff.models.MoneyAmount commission: The commission of this PlacedMarketOrder.
         """
 
         self._commission = commission

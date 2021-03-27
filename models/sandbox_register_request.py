@@ -32,8 +32,7 @@ class SandboxRegisterRequest(object):
     def broker_account_type(self, broker_account_type):
         """Sets the broker_account_type of this SandboxRegisterRequest.
 
-        :param broker_account_type: The broker_account_type of this SandboxRegisterRequest.
-        :type: clients.tinkoff.models.BrokerAccountType
+        :param clients.tinkoff.models.BrokerAccountType broker_account_type: The broker_account_type of this SandboxRegisterRequest.
         """
 
         self._broker_account_type = broker_account_type

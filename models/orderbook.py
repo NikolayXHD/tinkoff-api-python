@@ -89,8 +89,7 @@ class Orderbook(object):
     def figi(self, figi):
         """Sets the figi of this Orderbook.
 
-        :param figi: The figi of this Orderbook.
-        :type: str
+        :param str figi: The figi of this Orderbook.
         """
         if figi is None:
             raise ValueError('Invalid value for `figi`, must not be `None`')
@@ -110,8 +109,7 @@ class Orderbook(object):
     def depth(self, depth):
         """Sets the depth of this Orderbook.
 
-        :param depth: The depth of this Orderbook.
-        :type: int
+        :param int depth: The depth of this Orderbook.
         """
         if depth is None:
             raise ValueError('Invalid value for `depth`, must not be `None`')
@@ -131,8 +129,7 @@ class Orderbook(object):
     def bids(self, bids):
         """Sets the bids of this Orderbook.
 
-        :param bids: The bids of this Orderbook.
-        :type: list[clients.tinkoff.models.OrderResponse]
+        :param list[clients.tinkoff.models.OrderResponse] bids: The bids of this Orderbook.
         """
         if bids is None:
             raise ValueError('Invalid value for `bids`, must not be `None`')
@@ -152,8 +149,7 @@ class Orderbook(object):
     def asks(self, asks):
         """Sets the asks of this Orderbook.
 
-        :param asks: The asks of this Orderbook.
-        :type: list[clients.tinkoff.models.OrderResponse]
+        :param list[clients.tinkoff.models.OrderResponse] asks: The asks of this Orderbook.
         """
         if asks is None:
             raise ValueError('Invalid value for `asks`, must not be `None`')
@@ -173,8 +169,7 @@ class Orderbook(object):
     def trade_status(self, trade_status):
         """Sets the trade_status of this Orderbook.
 
-        :param trade_status: The trade_status of this Orderbook.
-        :type: clients.tinkoff.models.TradeStatus
+        :param clients.tinkoff.models.TradeStatus trade_status: The trade_status of this Orderbook.
         """
         if trade_status is None:
             raise ValueError(
@@ -198,8 +193,7 @@ class Orderbook(object):
         """Sets the min_price_increment of this Orderbook.
 
         Шаг цены
-        :param min_price_increment: The min_price_increment of this Orderbook.
-        :type: float
+        :param float min_price_increment: The min_price_increment of this Orderbook.
         """
         if min_price_increment is None:
             raise ValueError(
@@ -223,8 +217,7 @@ class Orderbook(object):
         """Sets the face_value of this Orderbook.
 
         Номинал для облигаций
-        :param face_value: The face_value of this Orderbook.
-        :type: float
+        :param float face_value: The face_value of this Orderbook.
         """
 
         self._face_value = face_value
@@ -242,8 +235,7 @@ class Orderbook(object):
     def last_price(self, last_price):
         """Sets the last_price of this Orderbook.
 
-        :param last_price: The last_price of this Orderbook.
-        :type: float
+        :param float last_price: The last_price of this Orderbook.
         """
 
         self._last_price = last_price
@@ -261,8 +253,7 @@ class Orderbook(object):
     def close_price(self, close_price):
         """Sets the close_price of this Orderbook.
 
-        :param close_price: The close_price of this Orderbook.
-        :type: float
+        :param float close_price: The close_price of this Orderbook.
         """
 
         self._close_price = close_price
@@ -282,8 +273,7 @@ class Orderbook(object):
         """Sets the limit_up of this Orderbook.
 
         Верхняя граница цены
-        :param limit_up: The limit_up of this Orderbook.
-        :type: float
+        :param float limit_up: The limit_up of this Orderbook.
         """
 
         self._limit_up = limit_up
@@ -303,8 +293,7 @@ class Orderbook(object):
         """Sets the limit_down of this Orderbook.
 
         Нижняя граница цены
-        :param limit_down: The limit_down of this Orderbook.
-        :type: float
+        :param float limit_down: The limit_down of this Orderbook.
         """
 
         self._limit_down = limit_down

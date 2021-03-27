@@ -30,8 +30,7 @@ class SandboxSetPositionBalanceRequest(object):
     def figi(self, figi):
         """Sets the figi of this SandboxSetPositionBalanceRequest.
 
-        :param figi: The figi of this SandboxSetPositionBalanceRequest.
-        :type: str
+        :param str figi: The figi of this SandboxSetPositionBalanceRequest.
         """
 
         self._figi = figi
@@ -49,8 +48,7 @@ class SandboxSetPositionBalanceRequest(object):
     def balance(self, balance):
         """Sets the balance of this SandboxSetPositionBalanceRequest.
 
-        :param balance: The balance of this SandboxSetPositionBalanceRequest.
-        :type: float
+        :param float balance: The balance of this SandboxSetPositionBalanceRequest.
         """
         if balance is None:
             raise ValueError('Invalid value for `balance`, must not be `None`')

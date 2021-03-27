@@ -39,8 +39,7 @@ class SandboxRegisterResponse(object):
     def tracking_id(self, tracking_id):
         """Sets the tracking_id of this SandboxRegisterResponse.
 
-        :param tracking_id: The tracking_id of this SandboxRegisterResponse.
-        :type: str
+        :param str tracking_id: The tracking_id of this SandboxRegisterResponse.
         """
         if tracking_id is None:
             raise ValueError(
@@ -62,8 +61,7 @@ class SandboxRegisterResponse(object):
     def status(self, status):
         """Sets the status of this SandboxRegisterResponse.
 
-        :param status: The status of this SandboxRegisterResponse.
-        :type: str
+        :param str status: The status of this SandboxRegisterResponse.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -83,8 +81,7 @@ class SandboxRegisterResponse(object):
     def payload(self, payload):
         """Sets the payload of this SandboxRegisterResponse.
 
-        :param payload: The payload of this SandboxRegisterResponse.
-        :type: clients.tinkoff.models.SandboxAccount
+        :param clients.tinkoff.models.SandboxAccount payload: The payload of this SandboxRegisterResponse.
         """
         if payload is None:
             raise ValueError('Invalid value for `payload`, must not be `None`')

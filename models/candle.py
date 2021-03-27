@@ -69,8 +69,7 @@ class Candle(object):
     def figi(self, figi):
         """Sets the figi of this Candle.
 
-        :param figi: The figi of this Candle.
-        :type: str
+        :param str figi: The figi of this Candle.
         """
         if figi is None:
             raise ValueError('Invalid value for `figi`, must not be `None`')
@@ -113,8 +112,7 @@ class Candle(object):
     def o(self, o):
         """Sets the o of this Candle.
 
-        :param o: The o of this Candle.
-        :type: float
+        :param float o: The o of this Candle.
         """
         if o is None:
             raise ValueError('Invalid value for `o`, must not be `None`')
@@ -134,8 +132,7 @@ class Candle(object):
     def c(self, c):
         """Sets the c of this Candle.
 
-        :param c: The c of this Candle.
-        :type: float
+        :param float c: The c of this Candle.
         """
         if c is None:
             raise ValueError('Invalid value for `c`, must not be `None`')
@@ -155,8 +152,7 @@ class Candle(object):
     def h(self, h):
         """Sets the h of this Candle.
 
-        :param h: The h of this Candle.
-        :type: float
+        :param float h: The h of this Candle.
         """
         if h is None:
             raise ValueError('Invalid value for `h`, must not be `None`')
@@ -176,8 +172,7 @@ class Candle(object):
     def l(self, l):
         """Sets the l of this Candle.
 
-        :param l: The l of this Candle.
-        :type: float
+        :param float l: The l of this Candle.
         """
         if l is None:
             raise ValueError('Invalid value for `l`, must not be `None`')
@@ -197,8 +192,7 @@ class Candle(object):
     def v(self, v):
         """Sets the v of this Candle.
 
-        :param v: The v of this Candle.
-        :type: int
+        :param int v: The v of this Candle.
         """
         if v is None:
             raise ValueError('Invalid value for `v`, must not be `None`')
@@ -220,8 +214,7 @@ class Candle(object):
         """Sets the time of this Candle.
 
         ISO8601
-        :param time: The time of this Candle.
-         :type: datetime.datetime
+        :param datetime.datetime time: The time of this Candle.
         """
         if time is None:
             raise ValueError('Invalid value for `time`, must not be `None`')

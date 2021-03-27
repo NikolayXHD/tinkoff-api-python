@@ -107,8 +107,7 @@ class Operation(object):
     def id(self, id):
         """Sets the id of this Operation.
 
-        :param id: The id of this Operation.
-        :type: str
+        :param str id: The id of this Operation.
         """
         if id is None:
             raise ValueError('Invalid value for `id`, must not be `None`')
@@ -128,8 +127,7 @@ class Operation(object):
     def status(self, status):
         """Sets the status of this Operation.
 
-        :param status: The status of this Operation.
-        :type: clients.tinkoff.models.OperationStatus
+        :param clients.tinkoff.models.OperationStatus status: The status of this Operation.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -149,8 +147,7 @@ class Operation(object):
     def trades(self, trades):
         """Sets the trades of this Operation.
 
-        :param trades: The trades of this Operation.
-        :type: list[clients.tinkoff.models.OperationTrade]
+        :param list[clients.tinkoff.models.OperationTrade] trades: The trades of this Operation.
         """
 
         self._trades = trades
@@ -168,8 +165,7 @@ class Operation(object):
     def commission(self, commission):
         """Sets the commission of this Operation.
 
-        :param commission: The commission of this Operation.
-        :type: clients.tinkoff.models.MoneyAmount
+        :param clients.tinkoff.models.MoneyAmount commission: The commission of this Operation.
         """
 
         self._commission = commission
@@ -211,8 +207,7 @@ class Operation(object):
     def payment(self, payment):
         """Sets the payment of this Operation.
 
-        :param payment: The payment of this Operation.
-        :type: float
+        :param float payment: The payment of this Operation.
         """
         if payment is None:
             raise ValueError('Invalid value for `payment`, must not be `None`')
@@ -232,8 +227,7 @@ class Operation(object):
     def price(self, price):
         """Sets the price of this Operation.
 
-        :param price: The price of this Operation.
-        :type: float
+        :param float price: The price of this Operation.
         """
 
         self._price = price
@@ -253,8 +247,7 @@ class Operation(object):
         """Sets the quantity of this Operation.
 
         Число инструментов в выставленной заявке
-        :param quantity: The quantity of this Operation.
-        :type: int
+        :param int quantity: The quantity of this Operation.
         """
 
         self._quantity = quantity
@@ -274,8 +267,7 @@ class Operation(object):
         """Sets the quantity_executed of this Operation.
 
         Число инструментов, исполненных в заявке
-        :param quantity_executed: The quantity_executed of this Operation.
-        :type: int
+        :param int quantity_executed: The quantity_executed of this Operation.
         """
 
         self._quantity_executed = quantity_executed
@@ -293,8 +285,7 @@ class Operation(object):
     def figi(self, figi):
         """Sets the figi of this Operation.
 
-        :param figi: The figi of this Operation.
-        :type: str
+        :param str figi: The figi of this Operation.
         """
 
         self._figi = figi
@@ -331,8 +322,7 @@ class Operation(object):
     def is_margin_call(self, is_margin_call):
         """Sets the is_margin_call of this Operation.
 
-        :param is_margin_call: The is_margin_call of this Operation.
-        :type: bool
+        :param bool is_margin_call: The is_margin_call of this Operation.
         """
         if is_margin_call is None:
             raise ValueError(
@@ -356,8 +346,7 @@ class Operation(object):
         """Sets the _date of this Operation.
 
         ISO8601
-        :param _date: The _date of this Operation.
-         :type: datetime.datetime
+        :param datetime.datetime _date: The _date of this Operation.
         """
         if _date is None:
             raise ValueError('Invalid value for `_date`, must not be `None`')

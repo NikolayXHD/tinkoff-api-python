@@ -32,8 +32,7 @@ class MarketOrderRequest(object):
     def lots(self, lots):
         """Sets the lots of this MarketOrderRequest.
 
-        :param lots: The lots of this MarketOrderRequest.
-        :type: int
+        :param int lots: The lots of this MarketOrderRequest.
         """
         if lots is None:
             raise ValueError('Invalid value for `lots`, must not be `None`')

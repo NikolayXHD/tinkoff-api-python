@@ -39,8 +39,7 @@ class LimitOrderResponse(object):
     def tracking_id(self, tracking_id):
         """Sets the tracking_id of this LimitOrderResponse.
 
-        :param tracking_id: The tracking_id of this LimitOrderResponse.
-        :type: str
+        :param str tracking_id: The tracking_id of this LimitOrderResponse.
         """
         if tracking_id is None:
             raise ValueError(
@@ -62,8 +61,7 @@ class LimitOrderResponse(object):
     def status(self, status):
         """Sets the status of this LimitOrderResponse.
 
-        :param status: The status of this LimitOrderResponse.
-        :type: str
+        :param str status: The status of this LimitOrderResponse.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -83,8 +81,7 @@ class LimitOrderResponse(object):
     def payload(self, payload):
         """Sets the payload of this LimitOrderResponse.
 
-        :param payload: The payload of this LimitOrderResponse.
-        :type: clients.tinkoff.models.PlacedLimitOrder
+        :param clients.tinkoff.models.PlacedLimitOrder payload: The payload of this LimitOrderResponse.
         """
         if payload is None:
             raise ValueError('Invalid value for `payload`, must not be `None`')

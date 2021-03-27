@@ -52,8 +52,7 @@ class MoneyAmount(object):
     def value(self, value):
         """Sets the value of this MoneyAmount.
 
-        :param value: The value of this MoneyAmount.
-        :type: float
+        :param float value: The value of this MoneyAmount.
         """
         if value is None:
             raise ValueError('Invalid value for `value`, must not be `None`')

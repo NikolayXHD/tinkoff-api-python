@@ -27,8 +27,7 @@ class UserAccounts(object):
     def accounts(self, accounts):
         """Sets the accounts of this UserAccounts.
 
-        :param accounts: The accounts of this UserAccounts.
-        :type: list[clients.tinkoff.models.UserAccount]
+        :param list[clients.tinkoff.models.UserAccount] accounts: The accounts of this UserAccounts.
         """
         if accounts is None:
             raise ValueError(

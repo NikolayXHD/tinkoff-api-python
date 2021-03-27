@@ -27,8 +27,7 @@ class Portfolio(object):
     def positions(self, positions):
         """Sets the positions of this Portfolio.
 
-        :param positions: The positions of this Portfolio.
-        :type: list[clients.tinkoff.models.PortfolioPosition]
+        :param list[clients.tinkoff.models.PortfolioPosition] positions: The positions of this Portfolio.
         """
         if positions is None:
             raise ValueError(

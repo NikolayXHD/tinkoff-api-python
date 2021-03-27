@@ -69,8 +69,7 @@ class Order(object):
     def order_id(self, order_id):
         """Sets the order_id of this Order.
 
-        :param order_id: The order_id of this Order.
-        :type: str
+        :param str order_id: The order_id of this Order.
         """
         if order_id is None:
             raise ValueError(
@@ -92,8 +91,7 @@ class Order(object):
     def figi(self, figi):
         """Sets the figi of this Order.
 
-        :param figi: The figi of this Order.
-        :type: str
+        :param str figi: The figi of this Order.
         """
         if figi is None:
             raise ValueError('Invalid value for `figi`, must not be `None`')
@@ -136,8 +134,7 @@ class Order(object):
     def status(self, status):
         """Sets the status of this Order.
 
-        :param status: The status of this Order.
-        :type: clients.tinkoff.models.OrderStatus
+        :param clients.tinkoff.models.OrderStatus status: The status of this Order.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -157,8 +154,7 @@ class Order(object):
     def requested_lots(self, requested_lots):
         """Sets the requested_lots of this Order.
 
-        :param requested_lots: The requested_lots of this Order.
-        :type: int
+        :param int requested_lots: The requested_lots of this Order.
         """
         if requested_lots is None:
             raise ValueError(
@@ -180,8 +176,7 @@ class Order(object):
     def executed_lots(self, executed_lots):
         """Sets the executed_lots of this Order.
 
-        :param executed_lots: The executed_lots of this Order.
-        :type: int
+        :param int executed_lots: The executed_lots of this Order.
         """
         if executed_lots is None:
             raise ValueError(
@@ -203,8 +198,7 @@ class Order(object):
     def type(self, type):
         """Sets the type of this Order.
 
-        :param type: The type of this Order.
-        :type: clients.tinkoff.models.OrderType
+        :param clients.tinkoff.models.OrderType type: The type of this Order.
         """
         if type is None:
             raise ValueError('Invalid value for `type`, must not be `None`')
@@ -224,8 +218,7 @@ class Order(object):
     def price(self, price):
         """Sets the price of this Order.
 
-        :param price: The price of this Order.
-        :type: float
+        :param float price: The price of this Order.
         """
         if price is None:
             raise ValueError('Invalid value for `price`, must not be `None`')

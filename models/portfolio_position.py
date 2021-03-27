@@ -90,8 +90,7 @@ class PortfolioPosition(object):
     def figi(self, figi):
         """Sets the figi of this PortfolioPosition.
 
-        :param figi: The figi of this PortfolioPosition.
-        :type: str
+        :param str figi: The figi of this PortfolioPosition.
         """
         if figi is None:
             raise ValueError('Invalid value for `figi`, must not be `None`')
@@ -111,8 +110,7 @@ class PortfolioPosition(object):
     def ticker(self, ticker):
         """Sets the ticker of this PortfolioPosition.
 
-        :param ticker: The ticker of this PortfolioPosition.
-        :type: str
+        :param str ticker: The ticker of this PortfolioPosition.
         """
 
         self._ticker = ticker
@@ -130,8 +128,7 @@ class PortfolioPosition(object):
     def isin(self, isin):
         """Sets the isin of this PortfolioPosition.
 
-        :param isin: The isin of this PortfolioPosition.
-        :type: str
+        :param str isin: The isin of this PortfolioPosition.
         """
 
         self._isin = isin
@@ -172,8 +169,7 @@ class PortfolioPosition(object):
     def balance(self, balance):
         """Sets the balance of this PortfolioPosition.
 
-        :param balance: The balance of this PortfolioPosition.
-        :type: float
+        :param float balance: The balance of this PortfolioPosition.
         """
         if balance is None:
             raise ValueError('Invalid value for `balance`, must not be `None`')
@@ -193,8 +189,7 @@ class PortfolioPosition(object):
     def blocked(self, blocked):
         """Sets the blocked of this PortfolioPosition.
 
-        :param blocked: The blocked of this PortfolioPosition.
-        :type: float
+        :param float blocked: The blocked of this PortfolioPosition.
         """
 
         self._blocked = blocked
@@ -212,8 +207,7 @@ class PortfolioPosition(object):
     def expected_yield(self, expected_yield):
         """Sets the expected_yield of this PortfolioPosition.
 
-        :param expected_yield: The expected_yield of this PortfolioPosition.
-        :type: clients.tinkoff.models.MoneyAmount
+        :param clients.tinkoff.models.MoneyAmount expected_yield: The expected_yield of this PortfolioPosition.
         """
 
         self._expected_yield = expected_yield
@@ -231,8 +225,7 @@ class PortfolioPosition(object):
     def lots(self, lots):
         """Sets the lots of this PortfolioPosition.
 
-        :param lots: The lots of this PortfolioPosition.
-        :type: int
+        :param int lots: The lots of this PortfolioPosition.
         """
         if lots is None:
             raise ValueError('Invalid value for `lots`, must not be `None`')
@@ -252,8 +245,7 @@ class PortfolioPosition(object):
     def average_position_price(self, average_position_price):
         """Sets the average_position_price of this PortfolioPosition.
 
-        :param average_position_price: The average_position_price of this PortfolioPosition.
-        :type: clients.tinkoff.models.MoneyAmount
+        :param clients.tinkoff.models.MoneyAmount average_position_price: The average_position_price of this PortfolioPosition.
         """
 
         self._average_position_price = average_position_price
@@ -271,8 +263,7 @@ class PortfolioPosition(object):
     def average_position_price_no_nkd(self, average_position_price_no_nkd):
         """Sets the average_position_price_no_nkd of this PortfolioPosition.
 
-        :param average_position_price_no_nkd: The average_position_price_no_nkd of this PortfolioPosition.
-        :type: clients.tinkoff.models.MoneyAmount
+        :param clients.tinkoff.models.MoneyAmount average_position_price_no_nkd: The average_position_price_no_nkd of this PortfolioPosition.
         """
 
         self._average_position_price_no_nkd = average_position_price_no_nkd
@@ -290,8 +281,7 @@ class PortfolioPosition(object):
     def name(self, name):
         """Sets the name of this PortfolioPosition.
 
-        :param name: The name of this PortfolioPosition.
-        :type: str
+        :param str name: The name of this PortfolioPosition.
         """
         if name is None:
             raise ValueError('Invalid value for `name`, must not be `None`')

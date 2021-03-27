@@ -39,8 +39,7 @@ class SearchMarketInstrumentResponse(object):
     def tracking_id(self, tracking_id):
         """Sets the tracking_id of this SearchMarketInstrumentResponse.
 
-        :param tracking_id: The tracking_id of this SearchMarketInstrumentResponse.
-        :type: str
+        :param str tracking_id: The tracking_id of this SearchMarketInstrumentResponse.
         """
         if tracking_id is None:
             raise ValueError(
@@ -62,8 +61,7 @@ class SearchMarketInstrumentResponse(object):
     def status(self, status):
         """Sets the status of this SearchMarketInstrumentResponse.
 
-        :param status: The status of this SearchMarketInstrumentResponse.
-        :type: str
+        :param str status: The status of this SearchMarketInstrumentResponse.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -83,8 +81,7 @@ class SearchMarketInstrumentResponse(object):
     def payload(self, payload):
         """Sets the payload of this SearchMarketInstrumentResponse.
 
-        :param payload: The payload of this SearchMarketInstrumentResponse.
-        :type: clients.tinkoff.models.SearchMarketInstrument
+        :param clients.tinkoff.models.SearchMarketInstrument payload: The payload of this SearchMarketInstrumentResponse.
         """
         if payload is None:
             raise ValueError('Invalid value for `payload`, must not be `None`')

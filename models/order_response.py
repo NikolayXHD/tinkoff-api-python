@@ -29,8 +29,7 @@ class OrderResponse(object):
     def price(self, price):
         """Sets the price of this OrderResponse.
 
-        :param price: The price of this OrderResponse.
-        :type: float
+        :param float price: The price of this OrderResponse.
         """
         if price is None:
             raise ValueError('Invalid value for `price`, must not be `None`')
@@ -50,8 +49,7 @@ class OrderResponse(object):
     def quantity(self, quantity):
         """Sets the quantity of this OrderResponse.
 
-        :param quantity: The quantity of this OrderResponse.
-        :type: int
+        :param int quantity: The quantity of this OrderResponse.
         """
         if quantity is None:
             raise ValueError(

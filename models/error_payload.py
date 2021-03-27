@@ -31,8 +31,7 @@ class ErrorPayload(object):
     def message(self, message):
         """Sets the message of this ErrorPayload.
 
-        :param message: The message of this ErrorPayload.
-        :type: str
+        :param str message: The message of this ErrorPayload.
         """
 
         self._message = message
@@ -50,8 +49,7 @@ class ErrorPayload(object):
     def code(self, code):
         """Sets the code of this ErrorPayload.
 
-        :param code: The code of this ErrorPayload.
-        :type: str
+        :param str code: The code of this ErrorPayload.
         """
 
         self._code = code

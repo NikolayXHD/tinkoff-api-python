@@ -39,8 +39,7 @@ class LimitOrderRequest(object):
     def lots(self, lots):
         """Sets the lots of this LimitOrderRequest.
 
-        :param lots: The lots of this LimitOrderRequest.
-        :type: int
+        :param int lots: The lots of this LimitOrderRequest.
         """
         if lots is None:
             raise ValueError('Invalid value for `lots`, must not be `None`')
@@ -83,8 +82,7 @@ class LimitOrderRequest(object):
     def price(self, price):
         """Sets the price of this LimitOrderRequest.
 
-        :param price: The price of this LimitOrderRequest.
-        :type: float
+        :param float price: The price of this LimitOrderRequest.
         """
         if price is None:
             raise ValueError('Invalid value for `price`, must not be `None`')

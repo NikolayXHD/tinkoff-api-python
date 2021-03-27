@@ -39,8 +39,7 @@ class Empty(object):
     def tracking_id(self, tracking_id):
         """Sets the tracking_id of this Empty.
 
-        :param tracking_id: The tracking_id of this Empty.
-        :type: str
+        :param str tracking_id: The tracking_id of this Empty.
         """
         if tracking_id is None:
             raise ValueError(
@@ -62,8 +61,7 @@ class Empty(object):
     def payload(self, payload):
         """Sets the payload of this Empty.
 
-        :param payload: The payload of this Empty.
-        :type: object
+        :param object payload: The payload of this Empty.
         """
         if payload is None:
             raise ValueError('Invalid value for `payload`, must not be `None`')
@@ -83,8 +81,7 @@ class Empty(object):
     def status(self, status):
         """Sets the status of this Empty.
 
-        :param status: The status of this Empty.
-        :type: str
+        :param str status: The status of this Empty.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')

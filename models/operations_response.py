@@ -39,8 +39,7 @@ class OperationsResponse(object):
     def tracking_id(self, tracking_id):
         """Sets the tracking_id of this OperationsResponse.
 
-        :param tracking_id: The tracking_id of this OperationsResponse.
-        :type: str
+        :param str tracking_id: The tracking_id of this OperationsResponse.
         """
         if tracking_id is None:
             raise ValueError(
@@ -62,8 +61,7 @@ class OperationsResponse(object):
     def status(self, status):
         """Sets the status of this OperationsResponse.
 
-        :param status: The status of this OperationsResponse.
-        :type: str
+        :param str status: The status of this OperationsResponse.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -83,8 +81,7 @@ class OperationsResponse(object):
     def payload(self, payload):
         """Sets the payload of this OperationsResponse.
 
-        :param payload: The payload of this OperationsResponse.
-        :type: clients.tinkoff.models.Operations
+        :param clients.tinkoff.models.Operations payload: The payload of this OperationsResponse.
         """
         if payload is None:
             raise ValueError('Invalid value for `payload`, must not be `None`')

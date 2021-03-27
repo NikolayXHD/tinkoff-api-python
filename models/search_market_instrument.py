@@ -72,8 +72,7 @@ class SearchMarketInstrument(object):
     def figi(self, figi):
         """Sets the figi of this SearchMarketInstrument.
 
-        :param figi: The figi of this SearchMarketInstrument.
-        :type: str
+        :param str figi: The figi of this SearchMarketInstrument.
         """
         if figi is None:
             raise ValueError('Invalid value for `figi`, must not be `None`')
@@ -93,8 +92,7 @@ class SearchMarketInstrument(object):
     def ticker(self, ticker):
         """Sets the ticker of this SearchMarketInstrument.
 
-        :param ticker: The ticker of this SearchMarketInstrument.
-        :type: str
+        :param str ticker: The ticker of this SearchMarketInstrument.
         """
         if ticker is None:
             raise ValueError('Invalid value for `ticker`, must not be `None`')
@@ -114,8 +112,7 @@ class SearchMarketInstrument(object):
     def isin(self, isin):
         """Sets the isin of this SearchMarketInstrument.
 
-        :param isin: The isin of this SearchMarketInstrument.
-        :type: str
+        :param str isin: The isin of this SearchMarketInstrument.
         """
 
         self._isin = isin
@@ -135,8 +132,7 @@ class SearchMarketInstrument(object):
         """Sets the min_price_increment of this SearchMarketInstrument.
 
         Шаг цены
-        :param min_price_increment: The min_price_increment of this SearchMarketInstrument.
-        :type: float
+        :param float min_price_increment: The min_price_increment of this SearchMarketInstrument.
         """
 
         self._min_price_increment = min_price_increment
@@ -154,8 +150,7 @@ class SearchMarketInstrument(object):
     def lot(self, lot):
         """Sets the lot of this SearchMarketInstrument.
 
-        :param lot: The lot of this SearchMarketInstrument.
-        :type: int
+        :param int lot: The lot of this SearchMarketInstrument.
         """
         if lot is None:
             raise ValueError('Invalid value for `lot`, must not be `None`')
@@ -194,8 +189,7 @@ class SearchMarketInstrument(object):
     def name(self, name):
         """Sets the name of this SearchMarketInstrument.
 
-        :param name: The name of this SearchMarketInstrument.
-        :type: str
+        :param str name: The name of this SearchMarketInstrument.
         """
         if name is None:
             raise ValueError('Invalid value for `name`, must not be `None`')

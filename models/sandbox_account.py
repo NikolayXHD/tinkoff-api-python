@@ -35,8 +35,7 @@ class SandboxAccount(object):
     def broker_account_type(self, broker_account_type):
         """Sets the broker_account_type of this SandboxAccount.
 
-        :param broker_account_type: The broker_account_type of this SandboxAccount.
-        :type: clients.tinkoff.models.BrokerAccountType
+        :param clients.tinkoff.models.BrokerAccountType broker_account_type: The broker_account_type of this SandboxAccount.
         """
         if broker_account_type is None:
             raise ValueError(
@@ -58,8 +57,7 @@ class SandboxAccount(object):
     def broker_account_id(self, broker_account_id):
         """Sets the broker_account_id of this SandboxAccount.
 
-        :param broker_account_id: The broker_account_id of this SandboxAccount.
-        :type: str
+        :param str broker_account_id: The broker_account_id of this SandboxAccount.
         """
         if broker_account_id is None:
             raise ValueError(

@@ -78,8 +78,7 @@ class MarketInstrument(object):
     def figi(self, figi):
         """Sets the figi of this MarketInstrument.
 
-        :param figi: The figi of this MarketInstrument.
-        :type: str
+        :param str figi: The figi of this MarketInstrument.
         """
         if figi is None:
             raise ValueError('Invalid value for `figi`, must not be `None`')
@@ -99,8 +98,7 @@ class MarketInstrument(object):
     def ticker(self, ticker):
         """Sets the ticker of this MarketInstrument.
 
-        :param ticker: The ticker of this MarketInstrument.
-        :type: str
+        :param str ticker: The ticker of this MarketInstrument.
         """
         if ticker is None:
             raise ValueError('Invalid value for `ticker`, must not be `None`')
@@ -120,8 +118,7 @@ class MarketInstrument(object):
     def isin(self, isin):
         """Sets the isin of this MarketInstrument.
 
-        :param isin: The isin of this MarketInstrument.
-        :type: str
+        :param str isin: The isin of this MarketInstrument.
         """
 
         self._isin = isin
@@ -141,8 +138,7 @@ class MarketInstrument(object):
         """Sets the min_price_increment of this MarketInstrument.
 
         Шаг цены
-        :param min_price_increment: The min_price_increment of this MarketInstrument.
-        :type: float
+        :param float min_price_increment: The min_price_increment of this MarketInstrument.
         """
 
         self._min_price_increment = min_price_increment
@@ -160,8 +156,7 @@ class MarketInstrument(object):
     def lot(self, lot):
         """Sets the lot of this MarketInstrument.
 
-        :param lot: The lot of this MarketInstrument.
-        :type: int
+        :param int lot: The lot of this MarketInstrument.
         """
         if lot is None:
             raise ValueError('Invalid value for `lot`, must not be `None`')
@@ -183,8 +178,7 @@ class MarketInstrument(object):
         """Sets the min_quantity of this MarketInstrument.
 
         Минимальное число инструментов для покупки должно быть не меньше, чем размер лота х количество лотов
-        :param min_quantity: The min_quantity of this MarketInstrument.
-        :type: int
+        :param int min_quantity: The min_quantity of this MarketInstrument.
         """
 
         self._min_quantity = min_quantity
@@ -222,8 +216,7 @@ class MarketInstrument(object):
     def name(self, name):
         """Sets the name of this MarketInstrument.
 
-        :param name: The name of this MarketInstrument.
-        :type: str
+        :param str name: The name of this MarketInstrument.
         """
         if name is None:
             raise ValueError('Invalid value for `name`, must not be `None`')

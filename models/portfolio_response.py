@@ -39,8 +39,7 @@ class PortfolioResponse(object):
     def tracking_id(self, tracking_id):
         """Sets the tracking_id of this PortfolioResponse.
 
-        :param tracking_id: The tracking_id of this PortfolioResponse.
-        :type: str
+        :param str tracking_id: The tracking_id of this PortfolioResponse.
         """
         if tracking_id is None:
             raise ValueError(
@@ -62,8 +61,7 @@ class PortfolioResponse(object):
     def status(self, status):
         """Sets the status of this PortfolioResponse.
 
-        :param status: The status of this PortfolioResponse.
-        :type: str
+        :param str status: The status of this PortfolioResponse.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -83,8 +81,7 @@ class PortfolioResponse(object):
     def payload(self, payload):
         """Sets the payload of this PortfolioResponse.
 
-        :param payload: The payload of this PortfolioResponse.
-        :type: clients.tinkoff.models.Portfolio
+        :param clients.tinkoff.models.Portfolio payload: The payload of this PortfolioResponse.
         """
         if payload is None:
             raise ValueError('Invalid value for `payload`, must not be `None`')

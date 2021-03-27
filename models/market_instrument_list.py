@@ -35,8 +35,7 @@ class MarketInstrumentList(object):
     def total(self, total):
         """Sets the total of this MarketInstrumentList.
 
-        :param total: The total of this MarketInstrumentList.
-        :type: float
+        :param float total: The total of this MarketInstrumentList.
         """
         if total is None:
             raise ValueError('Invalid value for `total`, must not be `None`')
@@ -56,8 +55,7 @@ class MarketInstrumentList(object):
     def instruments(self, instruments):
         """Sets the instruments of this MarketInstrumentList.
 
-        :param instruments: The instruments of this MarketInstrumentList.
-        :type: list[clients.tinkoff.models.MarketInstrument]
+        :param list[clients.tinkoff.models.MarketInstrument] instruments: The instruments of this MarketInstrumentList.
         """
         if instruments is None:
             raise ValueError(

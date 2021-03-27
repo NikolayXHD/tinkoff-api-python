@@ -27,8 +27,7 @@ class Operations(object):
     def operations(self, operations):
         """Sets the operations of this Operations.
 
-        :param operations: The operations of this Operations.
-        :type: list[clients.tinkoff.models.Operation]
+        :param list[clients.tinkoff.models.Operation] operations: The operations of this Operations.
         """
         if operations is None:
             raise ValueError(

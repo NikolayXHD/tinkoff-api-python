@@ -27,8 +27,7 @@ class Currencies(object):
     def currencies(self, currencies):
         """Sets the currencies of this Currencies.
 
-        :param currencies: The currencies of this Currencies.
-        :type: list[clients.tinkoff.models.CurrencyPosition]
+        :param list[clients.tinkoff.models.CurrencyPosition] currencies: The currencies of this Currencies.
         """
         if currencies is None:
             raise ValueError(

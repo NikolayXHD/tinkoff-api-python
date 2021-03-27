@@ -39,8 +39,7 @@ class UserAccountsResponse(object):
     def tracking_id(self, tracking_id):
         """Sets the tracking_id of this UserAccountsResponse.
 
-        :param tracking_id: The tracking_id of this UserAccountsResponse.
-        :type: str
+        :param str tracking_id: The tracking_id of this UserAccountsResponse.
         """
         if tracking_id is None:
             raise ValueError(
@@ -62,8 +61,7 @@ class UserAccountsResponse(object):
     def status(self, status):
         """Sets the status of this UserAccountsResponse.
 
-        :param status: The status of this UserAccountsResponse.
-        :type: str
+        :param str status: The status of this UserAccountsResponse.
         """
         if status is None:
             raise ValueError('Invalid value for `status`, must not be `None`')
@@ -83,8 +81,7 @@ class UserAccountsResponse(object):
     def payload(self, payload):
         """Sets the payload of this UserAccountsResponse.
 
-        :param payload: The payload of this UserAccountsResponse.
-        :type: clients.tinkoff.models.UserAccounts
+        :param clients.tinkoff.models.UserAccounts payload: The payload of this UserAccountsResponse.
         """
         if payload is None:
             raise ValueError('Invalid value for `payload`, must not be `None`')

@@ -35,8 +35,7 @@ class UserAccount(object):
     def broker_account_type(self, broker_account_type):
         """Sets the broker_account_type of this UserAccount.
 
-        :param broker_account_type: The broker_account_type of this UserAccount.
-        :type: clients.tinkoff.models.BrokerAccountType
+        :param clients.tinkoff.models.BrokerAccountType broker_account_type: The broker_account_type of this UserAccount.
         """
         if broker_account_type is None:
             raise ValueError(
@@ -58,8 +57,7 @@ class UserAccount(object):
     def broker_account_id(self, broker_account_id):
         """Sets the broker_account_id of this UserAccount.
 
-        :param broker_account_id: The broker_account_id of this UserAccount.
-        :type: str
+        :param str broker_account_id: The broker_account_id of this UserAccount.
         """
         if broker_account_id is None:
             raise ValueError(

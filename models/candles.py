@@ -39,8 +39,7 @@ class Candles(object):
     def figi(self, figi):
         """Sets the figi of this Candles.
 
-        :param figi: The figi of this Candles.
-        :type: str
+        :param str figi: The figi of this Candles.
         """
         if figi is None:
             raise ValueError('Invalid value for `figi`, must not be `None`')
@@ -83,8 +82,7 @@ class Candles(object):
     def candles(self, candles):
         """Sets the candles of this Candles.
 
-        :param candles: The candles of this Candles.
-        :type: list[clients.tinkoff.models.Candle]
+        :param list[clients.tinkoff.models.Candle] candles: The candles of this Candles.
         """
         if candles is None:
             raise ValueError('Invalid value for `candles`, must not be `None`')

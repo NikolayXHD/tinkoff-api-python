@@ -43,8 +43,7 @@ class OperationTrade(object):
     def trade_id(self, trade_id):
         """Sets the trade_id of this OperationTrade.
 
-        :param trade_id: The trade_id of this OperationTrade.
-        :type: str
+        :param str trade_id: The trade_id of this OperationTrade.
         """
         if trade_id is None:
             raise ValueError(
@@ -68,8 +67,7 @@ class OperationTrade(object):
         """Sets the _date of this OperationTrade.
 
         ISO8601
-        :param _date: The _date of this OperationTrade.
-         :type: datetime.datetime
+        :param datetime.datetime _date: The _date of this OperationTrade.
         """
         if _date is None:
             raise ValueError('Invalid value for `_date`, must not be `None`')
@@ -89,8 +87,7 @@ class OperationTrade(object):
     def price(self, price):
         """Sets the price of this OperationTrade.
 
-        :param price: The price of this OperationTrade.
-        :type: float
+        :param float price: The price of this OperationTrade.
         """
         if price is None:
             raise ValueError('Invalid value for `price`, must not be `None`')
@@ -110,8 +107,7 @@ class OperationTrade(object):
     def quantity(self, quantity):
         """Sets the quantity of this OperationTrade.
 
-        :param quantity: The quantity of this OperationTrade.
-        :type: int
+        :param int quantity: The quantity of this OperationTrade.
         """
         if quantity is None:
             raise ValueError(
