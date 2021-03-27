@@ -6,20 +6,12 @@ import json
 import mimetypes
 import os
 import re
-import sys
 import tempfile
-import time
-
 from urllib.parse import quote
 
-from .configuration import Configuration
 from . import models
 from . import rest
-
-KNOWN_ERROR_MESSAGES = [
-    'RequestValidation',
-    'OrderNotAvailable',
-]
+from .configuration import Configuration
 
 
 class ApiClient(object):
@@ -288,43 +280,21 @@ class ApiClient(object):
                                  (connection, read) timeouts.
         :returns: the response
         """
-        attempts = 10
-        i = 0
-        while True:
-            try:
-                return self.__call_api(
-                    resource_path,
-                    method,
-                    path_params,
-                    query_params,
-                    header_params,
-                    body,
-                    post_params,
-                    files,
-                    response_type,
-                    auth_settings,
-                    _return_http_data_only,
-                    collection_formats,
-                   _preload_content,
-                    _request_timeout,
-                )
-            except rest.ApiException as err:
-                is_known_error = self._is_known_error(err)
-                if not is_known_error:
-                    print(
-                        f'HTTP ERROR {err.status}: {err.body}',
-                        file=sys.stderr,
-                    )
-                if i == attempts - 1 or err.status != 500 or is_known_error:
-                    raise
-                else:
-                    time.sleep(0.5)
-                    i += 1
-
-    def _is_known_error(self, err: rest.ApiException) -> bool:
-        return (
-            isinstance(err.body, str)
-            and any(m for m in KNOWN_ERROR_MESSAGES if m in err.body)
+        return self.__call_api(
+            resource_path,
+            method,
+            path_params,
+            query_params,
+            header_params,
+            body,
+            post_params,
+            files,
+            response_type,
+            auth_settings,
+            _return_http_data_only,
+            collection_formats,
+            _preload_content,
+            _request_timeout,
         )
 
     def request(self, method, url, query_params=None, headers=None,
