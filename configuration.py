@@ -43,9 +43,10 @@ class Configuration(object, metaclass=TypeWithDefault):
         # Password for HTTP basic authentication
         self.password = ''
         # Logging Settings
-        self.logger = {}
-        self.logger['package_logger'] = logging.getLogger('clients.tinkoff')
-        self.logger['urllib3_logger'] = logging.getLogger('urllib3')
+        self.logger = {
+            'package_logger': logging.getLogger('clients.tinkoff'),
+            'urllib3_logger': logging.getLogger('urllib3')
+        }
         # Log format
         self.logger_format = '%(asctime)s %(levelname)s %(message)s'
         # Log stream handler
@@ -208,7 +209,8 @@ class Configuration(object, metaclass=TypeWithDefault):
         """
         return {}
 
-    def to_debug_report(self):
+    @staticmethod
+    def to_debug_report():
         """Gets the essential information for debugging.
 
         :returns: The report for debugging.
@@ -216,9 +218,9 @@ class Configuration(object, metaclass=TypeWithDefault):
         return (
             'Python SDK Debug Report:\n'
             'OS: {env}\n'
-            'Python Version: {pyversion}\n'
+            'Python Version: {py_version}\n'
             'Version of the API: 1.0.0\n'
             'SDK Package Version: 1.0.0'.format(
-                env=sys.platform, pyversion=sys.version
+                env=sys.platform, py_version=sys.version
             )
         )

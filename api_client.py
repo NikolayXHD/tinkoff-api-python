@@ -278,7 +278,7 @@ class ApiClient(object):
         elif klass == datetime.date:
             return self.__deserialize_date(data)
         elif klass == datetime.datetime:
-            return self.__deserialize_datatime(data)
+            return self.__deserialize_datetime(data)
         else:
             return self.__deserialize_model(data, klass)
 
@@ -428,7 +428,8 @@ class ApiClient(object):
                 ' `POST`, `PATCH`, `PUT` or `DELETE`.'
             )
 
-    def parameters_to_tuples(self, params, collection_formats):
+    @staticmethod
+    def parameters_to_tuples(params, collection_formats):
         """Get parameters as list of tuples, formatting collections.
 
         :param params: Parameters as dict or list of two-tuples
@@ -461,7 +462,8 @@ class ApiClient(object):
                 new_params.append((k, v))
         return new_params
 
-    def prepare_post_parameters(self, post_params=None, files=None):
+    @staticmethod
+    def prepare_post_parameters(post_params=None, files=None):
         """Builds form parameters.
 
         :param post_params: Normal form parameters.
@@ -481,18 +483,19 @@ class ApiClient(object):
                 for n in file_names:
                     with open(n, 'rb') as f:
                         filename = os.path.basename(f.name)
-                        filedata = f.read()
+                        file_data = f.read()
                         mimetype = (
                             mimetypes.guess_type(filename)[0]
                             or 'application/octet-stream'
                         )
                         params.append(
-                            tuple([k, tuple([filename, filedata, mimetype])])
+                            tuple([k, tuple([filename, file_data, mimetype])])
                         )
 
         return params
 
-    def select_header_accept(self, accepts):
+    @staticmethod
+    def select_header_accept(accepts):
         """Returns `Accept` based on an array of accepts provided.
 
         :param accepts: List of headers.
@@ -508,7 +511,8 @@ class ApiClient(object):
         else:
             return ', '.join(accepts)
 
-    def select_header_content_type(self, content_types):
+    @staticmethod
+    def select_header_content_type(content_types):
         """Returns `Content-Type` based on an array of content_types provided.
 
         :param content_types: List of content-types.
@@ -524,11 +528,11 @@ class ApiClient(object):
         else:
             return content_types[0]
 
-    def update_params_for_auth(self, headers, querys, auth_settings):
+    def update_params_for_auth(self, headers, query, auth_settings):
         """Updates header and query params based on authentication setting.
 
         :param headers: Header parameters dict to be updated.
-        :param querys: Query parameters tuple list to be updated.
+        :param query: Query parameters tuple list to be updated.
         :param auth_settings: Authentication setting identifiers list.
         """
         if not auth_settings:
@@ -542,7 +546,7 @@ class ApiClient(object):
                 elif auth_setting['in'] == 'header':
                     headers[auth_setting['key']] = auth_setting['value']
                 elif auth_setting['in'] == 'query':
-                    querys.append((auth_setting['key'], auth_setting['value']))
+                    query.append((auth_setting['key'], auth_setting['value']))
                 else:
                     raise ValueError(
                         'Authentication token must be in `query` or `header`'
@@ -573,7 +577,8 @@ class ApiClient(object):
 
         return path
 
-    def __deserialize_primitive(self, data, klass):
+    @staticmethod
+    def __deserialize_primitive(data, klass):
         """Deserializes string to primitive type.
 
         :param data: str.
@@ -588,14 +593,16 @@ class ApiClient(object):
         except TypeError:
             return data
 
-    def __deserialize_object(self, value):
+    @staticmethod
+    def __deserialize_object(value):
         """Return a original value.
 
         :rtype: object.
         """
         return value
 
-    def __deserialize_date(self, string):
+    @staticmethod
+    def __deserialize_date(string):
         """Deserializes string to date.
 
         :param string: str.
@@ -613,7 +620,8 @@ class ApiClient(object):
                 reason='Failed to parse `{0}` as date object'.format(string),
             )
 
-    def __deserialize_datatime(self, string):
+    @staticmethod
+    def __deserialize_datetime(string):
         """Deserializes string to datetime.
 
         The string should be in iso8601 datetime format.
@@ -635,7 +643,8 @@ class ApiClient(object):
                 ),
             )
 
-    def __hasattr(self, obj, name):
+    @staticmethod
+    def __hasattr(obj, name):
         return name in obj.__class__.__dict__
 
     def __deserialize_model(self, data, klass):
