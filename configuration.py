@@ -90,7 +90,7 @@ class Configuration(object, metaclass=TypeWithDefault):
         If the logger_file is None, then add stream handler and remove file
         handler. Otherwise, add file handler and remove stream handler.
 
-        :type: str
+        :rtype: str
         """
         return self.__logger_file
 
@@ -127,7 +127,7 @@ class Configuration(object, metaclass=TypeWithDefault):
     def debug(self):
         """Debug status
 
-        :type: bool
+        :rtype: bool
         """
         return self.__debug
 
@@ -158,7 +158,7 @@ class Configuration(object, metaclass=TypeWithDefault):
 
         The logger_formatter will be updated when sets logger_format.
 
-        :type: str
+        :rtype: str
         """
         return self.__logger_format
 
