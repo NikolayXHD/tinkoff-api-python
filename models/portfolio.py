@@ -4,13 +4,9 @@ import pprint
 
 
 class Portfolio(object):
-    swagger_types: dict[str, str] = {
-        'positions': 'list[PortfolioPosition]'
-    }
+    swagger_types: dict[str, str] = {'positions': 'list[PortfolioPosition]'}
 
-    attribute_map: dict[str, str] = {
-        'positions': 'positions'
-    }
+    attribute_map: dict[str, str] = {'positions': 'positions'}
 
     def __init__(self, positions=None):
         """Portfolio - a model defined in Swagger"""
@@ -35,7 +31,9 @@ class Portfolio(object):
         :type: list[clients.tinkoff.models.PortfolioPosition]
         """
         if positions is None:
-            raise ValueError("Invalid value for `positions`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `positions`, must not be `None`'
+            )
 
         self._positions = positions
 
@@ -46,18 +44,23 @@ class Portfolio(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

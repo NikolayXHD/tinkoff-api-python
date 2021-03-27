@@ -4,6 +4,6 @@ import enum
 
 
 class OperationStatus(enum.Enum):
-    DONE = "Done"
-    DECLINE = "Decline"
-    PROGRESS = "Progress"
+    DONE = 'Done'
+    DECLINE = 'Decline'
+    PROGRESS = 'Progress'

@@ -38,7 +38,7 @@ class SandboxApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method sandbox_clear_post" % key
+                    ' to method sandbox_clear_post' % key
                 )
             params[key] = val
         del params['kwargs']
@@ -49,7 +49,9 @@ class SandboxApi(object):
 
         query_params = []
         if 'broker_account_id' in params:
-            query_params.append(('brokerAccountId', params['broker_account_id']))
+            query_params.append(
+                ('brokerAccountId', params['broker_account_id'])
+            )
 
         header_params = {}
 
@@ -58,12 +60,14 @@ class SandboxApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/sandbox/clear', 'POST',
+            '/sandbox/clear',
+            'POST',
             path_params,
             query_params,
             header_params,
@@ -75,7 +79,8 @@ class SandboxApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def sandbox_currencies_balance_post(self, body, **kwargs):
         """Выставление баланса по валютным позициям
@@ -85,7 +90,9 @@ class SandboxApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.sandbox_currencies_balance_post_with_http_info(body, **kwargs)
+        return self.sandbox_currencies_balance_post_with_http_info(
+            body, **kwargs
+        )
 
     def sandbox_currencies_balance_post_with_http_info(self, body, **kwargs):
         """Выставление баланса по валютным позициям
@@ -105,14 +112,15 @@ class SandboxApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method sandbox_currencies_balance_post" % key
+                    ' to method sandbox_currencies_balance_post' % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `sandbox_currencies_balance_post`")
+        if 'body' not in params or params['body'] is None:
+            raise ValueError(
+                'Missing the required parameter `body` when calling `sandbox_currencies_balance_post`'
+            )
 
         collection_formats = {}
 
@@ -120,7 +128,9 @@ class SandboxApi(object):
 
         query_params = []
         if 'broker_account_id' in params:
-            query_params.append(('brokerAccountId', params['broker_account_id']))
+            query_params.append(
+                ('brokerAccountId', params['broker_account_id'])
+            )
 
         header_params = {}
 
@@ -131,16 +141,19 @@ class SandboxApi(object):
         if 'body' in params:
             body_params = params['body']
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(
-            ['application/json'])
+        header_params[
+            'Content-Type'
+        ] = self.api_client.select_header_content_type(['application/json'])
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/sandbox/currencies/balance', 'POST',
+            '/sandbox/currencies/balance',
+            'POST',
             path_params,
             query_params,
             header_params,
@@ -152,7 +165,8 @@ class SandboxApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def sandbox_positions_balance_post(self, body, **kwargs):
         """Выставление баланса по инструментным позициям
@@ -163,7 +177,9 @@ class SandboxApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.sandbox_positions_balance_post_with_http_info(body, **kwargs)
+        return self.sandbox_positions_balance_post_with_http_info(
+            body, **kwargs
+        )
 
     def sandbox_positions_balance_post_with_http_info(self, body, **kwargs):
         """Выставление баланса по инструментным позициям
@@ -184,14 +200,15 @@ class SandboxApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method sandbox_positions_balance_post" % key
+                    ' to method sandbox_positions_balance_post' % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `sandbox_positions_balance_post`")
+        if 'body' not in params or params['body'] is None:
+            raise ValueError(
+                'Missing the required parameter `body` when calling `sandbox_positions_balance_post`'
+            )
 
         collection_formats = {}
 
@@ -199,7 +216,9 @@ class SandboxApi(object):
 
         query_params = []
         if 'broker_account_id' in params:
-            query_params.append(('brokerAccountId', params['broker_account_id']))
+            query_params.append(
+                ('brokerAccountId', params['broker_account_id'])
+            )
 
         header_params = {}
 
@@ -210,16 +229,19 @@ class SandboxApi(object):
         if 'body' in params:
             body_params = params['body']
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(
-            ['application/json'])
+        header_params[
+            'Content-Type'
+        ] = self.api_client.select_header_content_type(['application/json'])
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/sandbox/positions/balance', 'POST',
+            '/sandbox/positions/balance',
+            'POST',
             path_params,
             query_params,
             header_params,
@@ -231,7 +253,8 @@ class SandboxApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def sandbox_register_post(self, **kwargs):
         """Регистрация клиента в sandbox
@@ -263,7 +286,7 @@ class SandboxApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method sandbox_register_post" % key
+                    ' to method sandbox_register_post' % key
                 )
             params[key] = val
         del params['kwargs']
@@ -283,16 +306,19 @@ class SandboxApi(object):
         if 'body' in params:
             body_params = params['body']
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(
-            ['application/json'])
+        header_params[
+            'Content-Type'
+        ] = self.api_client.select_header_content_type(['application/json'])
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/sandbox/register', 'POST',
+            '/sandbox/register',
+            'POST',
             path_params,
             query_params,
             header_params,
@@ -304,7 +330,8 @@ class SandboxApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def sandbox_remove_post(self, **kwargs):
         """Удаление счета
@@ -334,7 +361,7 @@ class SandboxApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method sandbox_remove_post" % key
+                    ' to method sandbox_remove_post' % key
                 )
             params[key] = val
         del params['kwargs']
@@ -345,7 +372,9 @@ class SandboxApi(object):
 
         query_params = []
         if 'broker_account_id' in params:
-            query_params.append(('brokerAccountId', params['broker_account_id']))
+            query_params.append(
+                ('brokerAccountId', params['broker_account_id'])
+            )
 
         header_params = {}
 
@@ -354,12 +383,14 @@ class SandboxApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/sandbox/remove', 'POST',
+            '/sandbox/remove',
+            'POST',
             path_params,
             query_params,
             header_params,
@@ -371,4 +402,5 @@ class SandboxApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )

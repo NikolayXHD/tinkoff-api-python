@@ -34,7 +34,7 @@ class MarketApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method market_bonds_get" % key
+                    ' to method market_bonds_get' % key
                 )
             params[key] = val
         del params['kwargs']
@@ -52,12 +52,14 @@ class MarketApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/market/bonds', 'GET',
+            '/market/bonds',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -69,7 +71,8 @@ class MarketApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def market_candles_get(self, figi, _from, to, interval, **kwargs):
         """Получение исторических свечей по FIGI
@@ -81,10 +84,14 @@ class MarketApi(object):
         :rtype: models.CandlesResponse
         """
         kwargs['_return_http_data_only'] = True
-        data = self.market_candles_get_with_http_info(figi, _from, to, interval, **kwargs)
+        data = self.market_candles_get_with_http_info(
+            figi, _from, to, interval, **kwargs
+        )
         return data
 
-    def market_candles_get_with_http_info(self, figi, _from, to, interval, **kwargs):
+    def market_candles_get_with_http_info(
+        self, figi, _from, to, interval, **kwargs
+    ):
         """Получение исторических свечей по FIGI
 
         :param str figi: FIGI (required)
@@ -104,26 +111,30 @@ class MarketApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method market_candles_get" % key
+                    ' to method market_candles_get' % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'figi' is set
-        if ('figi' not in params or
-                params['figi'] is None):
-            raise ValueError("Missing the required parameter `figi` when calling `market_candles_get`")
+        if 'figi' not in params or params['figi'] is None:
+            raise ValueError(
+                'Missing the required parameter `figi` when calling `market_candles_get`'
+            )
         # verify the required parameter '_from' is set
-        if ('_from' not in params or
-                params['_from'] is None):
-            raise ValueError("Missing the required parameter `_from` when calling `market_candles_get`")
+        if '_from' not in params or params['_from'] is None:
+            raise ValueError(
+                'Missing the required parameter `_from` when calling `market_candles_get`'
+            )
         # verify the required parameter 'to' is set
-        if ('to' not in params or
-                params['to'] is None):
-            raise ValueError("Missing the required parameter `to` when calling `market_candles_get`")
+        if 'to' not in params or params['to'] is None:
+            raise ValueError(
+                'Missing the required parameter `to` when calling `market_candles_get`'
+            )
         # verify the required parameter 'interval' is set
-        if ('interval' not in params or
-                params['interval'] is None):
-            raise ValueError("Missing the required parameter `interval` when calling `market_candles_get`")
+        if 'interval' not in params or params['interval'] is None:
+            raise ValueError(
+                'Missing the required parameter `interval` when calling `market_candles_get`'
+            )
 
         collection_formats = {}
 
@@ -146,12 +157,14 @@ class MarketApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/market/candles', 'GET',
+            '/market/candles',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -163,7 +176,8 @@ class MarketApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def market_currencies_get(self, **kwargs):
         """Получение списка валютных пар
@@ -189,7 +203,7 @@ class MarketApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method market_currencies_get" % key
+                    ' to method market_currencies_get' % key
                 )
             params[key] = val
         del params['kwargs']
@@ -207,12 +221,14 @@ class MarketApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/market/currencies', 'GET',
+            '/market/currencies',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -224,7 +240,8 @@ class MarketApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def market_etfs_get(self, **kwargs):
         """Получение списка ETF
@@ -250,7 +267,7 @@ class MarketApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method market_etfs_get" % key
+                    ' to method market_etfs_get' % key
                 )
             params[key] = val
         del params['kwargs']
@@ -268,12 +285,14 @@ class MarketApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/market/etfs', 'GET',
+            '/market/etfs',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -285,7 +304,8 @@ class MarketApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def market_orderbook_get(self, figi, depth, **kwargs):
         """Получение стакана по FIGI
@@ -315,18 +335,20 @@ class MarketApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method market_orderbook_get" % key
+                    ' to method market_orderbook_get' % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'figi' is set
-        if ('figi' not in params or
-                params['figi'] is None):
-            raise ValueError("Missing the required parameter `figi` when calling `market_orderbook_get`")
+        if 'figi' not in params or params['figi'] is None:
+            raise ValueError(
+                'Missing the required parameter `figi` when calling `market_orderbook_get`'
+            )
         # verify the required parameter 'depth' is set
-        if ('depth' not in params or
-                params['depth'] is None):
-            raise ValueError("Missing the required parameter `depth` when calling `market_orderbook_get`")
+        if 'depth' not in params or params['depth'] is None:
+            raise ValueError(
+                'Missing the required parameter `depth` when calling `market_orderbook_get`'
+            )
 
         collection_formats = {}
 
@@ -345,12 +367,14 @@ class MarketApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/market/orderbook', 'GET',
+            '/market/orderbook',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -362,7 +386,8 @@ class MarketApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def market_search_by_figi_get(self, figi, **kwargs):
         """Получение инструмента по FIGI
@@ -390,14 +415,15 @@ class MarketApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method market_search_by_figi_get" % key
+                    ' to method market_search_by_figi_get' % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'figi' is set
-        if ('figi' not in params or
-                params['figi'] is None):
-            raise ValueError("Missing the required parameter `figi` when calling `market_search_by_figi_get`")
+        if 'figi' not in params or params['figi'] is None:
+            raise ValueError(
+                'Missing the required parameter `figi` when calling `market_search_by_figi_get`'
+            )
 
         collection_formats = {}
 
@@ -414,12 +440,14 @@ class MarketApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/market/search/by-figi', 'GET',
+            '/market/search/by-figi',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -431,7 +459,8 @@ class MarketApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def market_search_by_ticker_get(self, ticker, **kwargs):
         """Получение инструмента по тикеру
@@ -440,7 +469,9 @@ class MarketApi(object):
         :rtype: models.MarketInstrumentListResponse
         """
         kwargs['_return_http_data_only'] = True
-        return self.market_search_by_ticker_get_with_http_info(ticker, **kwargs)
+        return self.market_search_by_ticker_get_with_http_info(
+            ticker, **kwargs
+        )
 
     def market_search_by_ticker_get_with_http_info(self, ticker, **kwargs):
         """Получение инструмента по тикеру
@@ -459,14 +490,15 @@ class MarketApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method market_search_by_ticker_get" % key
+                    ' to method market_search_by_ticker_get' % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'ticker' is set
-        if ('ticker' not in params or
-                params['ticker'] is None):
-            raise ValueError("Missing the required parameter `ticker` when calling `market_search_by_ticker_get`")
+        if 'ticker' not in params or params['ticker'] is None:
+            raise ValueError(
+                'Missing the required parameter `ticker` when calling `market_search_by_ticker_get`'
+            )
 
         collection_formats = {}
 
@@ -483,12 +515,14 @@ class MarketApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/market/search/by-ticker', 'GET',
+            '/market/search/by-ticker',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -500,7 +534,8 @@ class MarketApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def market_stocks_get(self, **kwargs):
         """Получение списка акций
@@ -526,7 +561,7 @@ class MarketApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method market_stocks_get" % key
+                    ' to method market_stocks_get' % key
                 )
             params[key] = val
         del params['kwargs']
@@ -544,12 +579,14 @@ class MarketApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/market/stocks', 'GET',
+            '/market/stocks',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -561,4 +598,5 @@ class MarketApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )

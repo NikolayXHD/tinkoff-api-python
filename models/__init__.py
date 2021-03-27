@@ -43,8 +43,12 @@ from .sandbox_account import SandboxAccount
 from .sandbox_currency import SandboxCurrency
 from .sandbox_register_request import SandboxRegisterRequest
 from .sandbox_register_response import SandboxRegisterResponse
-from .sandbox_set_currency_balance_request import SandboxSetCurrencyBalanceRequest
-from .sandbox_set_position_balance_request import SandboxSetPositionBalanceRequest
+from .sandbox_set_currency_balance_request import (
+    SandboxSetCurrencyBalanceRequest,
+)
+from .sandbox_set_position_balance_request import (
+    SandboxSetPositionBalanceRequest,
+)
 from .search_market_instrument import SearchMarketInstrument
 from .search_market_instrument_response import SearchMarketInstrumentResponse
 from .trade_status import TradeStatus

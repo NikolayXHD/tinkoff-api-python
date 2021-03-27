@@ -18,7 +18,7 @@ class Operation(object):
         'instrument_type': 'InstrumentType',
         'is_margin_call': 'bool',
         '_date': 'datetime',
-        'operation_type': 'OperationTypeWithCommission'
+        'operation_type': 'OperationTypeWithCommission',
     }
 
     attribute_map: dict[str, str] = {
@@ -35,10 +35,26 @@ class Operation(object):
         'instrument_type': 'instrumentType',
         'is_margin_call': 'isMarginCall',
         '_date': 'date',
-        'operation_type': 'operationType'
+        'operation_type': 'operationType',
     }
 
-    def __init__(self, id=None, status=None, trades=None, commission=None, currency=None, payment=None, price=None, quantity=None, quantity_executed=None, figi=None, instrument_type=None, is_margin_call=None, _date=None, operation_type=None):
+    def __init__(
+        self,
+        id=None,
+        status=None,
+        trades=None,
+        commission=None,
+        currency=None,
+        payment=None,
+        price=None,
+        quantity=None,
+        quantity_executed=None,
+        figi=None,
+        instrument_type=None,
+        is_margin_call=None,
+        _date=None,
+        operation_type=None,
+    ):
         """Operation - a model defined in Swagger"""
         self._id = None
         self._status = None
@@ -95,7 +111,7 @@ class Operation(object):
         :type: str
         """
         if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")
+            raise ValueError('Invalid value for `id`, must not be `None`')
 
         self._id = id
 
@@ -116,7 +132,7 @@ class Operation(object):
         :type: clients.tinkoff.models.OperationStatus
         """
         if status is None:
-            raise ValueError("Invalid value for `status`, must not be `None`")
+            raise ValueError('Invalid value for `status`, must not be `None`')
 
         self._status = status
 
@@ -176,7 +192,9 @@ class Operation(object):
             The currency of this Operation.
         """
         if currency is None:
-            raise ValueError("Invalid value for `currency`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `currency`, must not be `None`'
+            )
 
         self._currency = currency
 
@@ -197,7 +215,7 @@ class Operation(object):
         :type: float
         """
         if payment is None:
-            raise ValueError("Invalid value for `payment`, must not be `None`")
+            raise ValueError('Invalid value for `payment`, must not be `None`')
 
         self._payment = payment
 
@@ -317,7 +335,9 @@ class Operation(object):
         :type: bool
         """
         if is_margin_call is None:
-            raise ValueError("Invalid value for `is_margin_call`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `is_margin_call`, must not be `None`'
+            )
 
         self._is_margin_call = is_margin_call
 
@@ -340,7 +360,7 @@ class Operation(object):
          :type: datetime.datetime
         """
         if _date is None:
-            raise ValueError("Invalid value for `_date`, must not be `None`")
+            raise ValueError('Invalid value for `_date`, must not be `None`')
 
         self.__date = _date
 
@@ -370,18 +390,23 @@ class Operation(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

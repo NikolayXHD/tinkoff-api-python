@@ -42,18 +42,20 @@ class OperationsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method operations_get" % key
+                    ' to method operations_get' % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter '_from' is set
-        if ('_from' not in params or
-                params['_from'] is None):
-            raise ValueError("Missing the required parameter `_from` when calling `operations_get`")
+        if '_from' not in params or params['_from'] is None:
+            raise ValueError(
+                'Missing the required parameter `_from` when calling `operations_get`'
+            )
         # verify the required parameter 'to' is set
-        if ('to' not in params or
-                params['to'] is None):
-            raise ValueError("Missing the required parameter `to` when calling `operations_get`")
+        if 'to' not in params or params['to'] is None:
+            raise ValueError(
+                'Missing the required parameter `to` when calling `operations_get`'
+            )
 
         collection_formats = {}
 
@@ -67,7 +69,9 @@ class OperationsApi(object):
         if 'figi' in params:
             query_params.append(('figi', params['figi']))
         if 'broker_account_id' in params:
-            query_params.append(('brokerAccountId', params['broker_account_id']))
+            query_params.append(
+                ('brokerAccountId', params['broker_account_id'])
+            )
 
         header_params = {}
 
@@ -76,12 +80,14 @@ class OperationsApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/operations', 'GET',
+            '/operations',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -93,4 +99,5 @@ class OperationsApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )

@@ -15,7 +15,7 @@ class PortfolioPosition(object):
         'lots': 'int',
         'average_position_price': 'MoneyAmount',
         'average_position_price_no_nkd': 'MoneyAmount',
-        'name': 'str'
+        'name': 'str',
     }
 
     attribute_map: dict[str, str] = {
@@ -29,10 +29,23 @@ class PortfolioPosition(object):
         'lots': 'lots',
         'average_position_price': 'averagePositionPrice',
         'average_position_price_no_nkd': 'averagePositionPriceNoNkd',
-        'name': 'name'
+        'name': 'name',
     }
 
-    def __init__(self, figi=None, ticker=None, isin=None, instrument_type=None, balance=None, blocked=None, expected_yield=None, lots=None, average_position_price=None, average_position_price_no_nkd=None, name=None):
+    def __init__(
+        self,
+        figi=None,
+        ticker=None,
+        isin=None,
+        instrument_type=None,
+        balance=None,
+        blocked=None,
+        expected_yield=None,
+        lots=None,
+        average_position_price=None,
+        average_position_price_no_nkd=None,
+        name=None,
+    ):
         """PortfolioPosition - a model defined in Swagger"""
         self._figi = None
         self._ticker = None
@@ -81,7 +94,7 @@ class PortfolioPosition(object):
         :type: str
         """
         if figi is None:
-            raise ValueError("Invalid value for `figi`, must not be `None`")
+            raise ValueError('Invalid value for `figi`, must not be `None`')
 
         self._figi = figi
 
@@ -140,7 +153,9 @@ class PortfolioPosition(object):
             The instrument_type of this PortfolioPosition.
         """
         if instrument_type is None:
-            raise ValueError("Invalid value for `instrument_type`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `instrument_type`, must not be `None`'
+            )
 
         self._instrument_type = instrument_type
 
@@ -161,7 +176,7 @@ class PortfolioPosition(object):
         :type: float
         """
         if balance is None:
-            raise ValueError("Invalid value for `balance`, must not be `None`")
+            raise ValueError('Invalid value for `balance`, must not be `None`')
 
         self._balance = balance
 
@@ -220,7 +235,7 @@ class PortfolioPosition(object):
         :type: int
         """
         if lots is None:
-            raise ValueError("Invalid value for `lots`, must not be `None`")
+            raise ValueError('Invalid value for `lots`, must not be `None`')
 
         self._lots = lots
 
@@ -279,7 +294,7 @@ class PortfolioPosition(object):
         :type: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")
+            raise ValueError('Invalid value for `name`, must not be `None`')
 
         self._name = name
 
@@ -290,18 +305,23 @@ class PortfolioPosition(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

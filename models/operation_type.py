@@ -4,5 +4,5 @@ import enum
 
 
 class OperationType(enum.Enum):
-    BUY = "Buy"
-    SELL = "Sell"
+    BUY = 'Buy'
+    SELL = 'Sell'

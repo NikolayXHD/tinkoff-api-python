@@ -4,7 +4,7 @@ import enum
 
 
 class InstrumentType(enum.Enum):
-    STOCK = "Stock"
-    CURRENCY = "Currency"
-    BOND = "Bond"
-    ETF = "Etf"
+    STOCK = 'Stock'
+    CURRENCY = 'Currency'
+    BOND = 'Bond'
+    ETF = 'Etf'

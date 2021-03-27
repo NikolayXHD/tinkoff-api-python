@@ -12,7 +12,7 @@ class SearchMarketInstrument(object):
         'lot': 'int',
         'currency': 'Currency',
         'name': 'str',
-        'type': 'InstrumentType'
+        'type': 'InstrumentType',
     }
 
     attribute_map: dict[str, str] = {
@@ -23,10 +23,20 @@ class SearchMarketInstrument(object):
         'lot': 'lot',
         'currency': 'currency',
         'name': 'name',
-        'type': 'type'
+        'type': 'type',
     }
 
-    def __init__(self, figi=None, ticker=None, isin=None, min_price_increment=None, lot=None, currency=None, name=None, type=None):
+    def __init__(
+        self,
+        figi=None,
+        ticker=None,
+        isin=None,
+        min_price_increment=None,
+        lot=None,
+        currency=None,
+        name=None,
+        type=None,
+    ):
         """SearchMarketInstrument - a model defined in Swagger"""
         self._figi = None
         self._ticker = None
@@ -66,7 +76,7 @@ class SearchMarketInstrument(object):
         :type: str
         """
         if figi is None:
-            raise ValueError("Invalid value for `figi`, must not be `None`")
+            raise ValueError('Invalid value for `figi`, must not be `None`')
 
         self._figi = figi
 
@@ -87,7 +97,7 @@ class SearchMarketInstrument(object):
         :type: str
         """
         if ticker is None:
-            raise ValueError("Invalid value for `ticker`, must not be `None`")
+            raise ValueError('Invalid value for `ticker`, must not be `None`')
 
         self._ticker = ticker
 
@@ -148,7 +158,7 @@ class SearchMarketInstrument(object):
         :type: int
         """
         if lot is None:
-            raise ValueError("Invalid value for `lot`, must not be `None`")
+            raise ValueError('Invalid value for `lot`, must not be `None`')
 
         self._lot = lot
 
@@ -188,7 +198,7 @@ class SearchMarketInstrument(object):
         :type: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")
+            raise ValueError('Invalid value for `name`, must not be `None`')
 
         self._name = name
 
@@ -209,7 +219,7 @@ class SearchMarketInstrument(object):
             The type of this SearchMarketInstrument.
         """
         if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")
+            raise ValueError('Invalid value for `type`, must not be `None`')
 
         self._type = type
 
@@ -220,18 +230,23 @@ class SearchMarketInstrument(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

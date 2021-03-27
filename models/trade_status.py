@@ -4,5 +4,5 @@ import enum
 
 
 class TradeStatus(enum.Enum):
-    NORMALTRADING = "NormalTrading"
-    NOTAVAILABLEFORTRADING = "NotAvailableForTrading"
+    NORMALTRADING = 'NormalTrading'
+    NOTAVAILABLEFORTRADING = 'NotAvailableForTrading'

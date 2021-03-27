@@ -4,15 +4,9 @@ import pprint
 
 
 class ErrorPayload(object):
-    swagger_types: dict[str, str] = {
-        'message': 'str',
-        'code': 'str'
-    }
+    swagger_types: dict[str, str] = {'message': 'str', 'code': 'str'}
 
-    attribute_map: dict[str, str] = {
-        'message': 'message',
-        'code': 'code'
-    }
+    attribute_map: dict[str, str] = {'message': 'message', 'code': 'code'}
 
     def __init__(self, message=None, code=None):
         """ErrorPayload - a model defined in Swagger"""
@@ -69,18 +63,23 @@ class ErrorPayload(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

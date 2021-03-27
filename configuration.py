@@ -27,7 +27,7 @@ class Configuration(object, metaclass=TypeWithDefault):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "https://api-invest.tinkoff.ru/openapi/"
+        self.host = 'https://api-invest.tinkoff.ru/openapi/'
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
@@ -39,13 +39,13 @@ class Configuration(object, metaclass=TypeWithDefault):
         # function to refresh API key if expired
         self.refresh_api_key_hook = None
         # Username for HTTP basic authentication
-        self.username = ""
+        self.username = ''
         # Password for HTTP basic authentication
-        self.password = ""
+        self.password = ''
         # Logging Settings
         self.logger = {}
-        self.logger["package_logger"] = logging.getLogger("clients.tinkoff")
-        self.logger["urllib3_logger"] = logging.getLogger("urllib3")
+        self.logger['package_logger'] = logging.getLogger('clients.tinkoff')
+        self.logger['urllib3_logger'] = logging.getLogger('urllib3')
         # Log format
         self.logger_format = '%(asctime)s %(levelname)s %(message)s'
         # Log stream handler
@@ -188,7 +188,7 @@ class Configuration(object, metaclass=TypeWithDefault):
         if key:
             prefix = self.api_key_prefix.get(identifier)
             if prefix:
-                return "%s %s" % (prefix, key)
+                return '%s %s' % (prefix, key)
             else:
                 return key
 
@@ -206,17 +206,19 @@ class Configuration(object, metaclass=TypeWithDefault):
 
         :returns: The Auth Settings information dict.
         """
-        return {
-        }
+        return {}
 
     def to_debug_report(self):
         """Gets the essential information for debugging.
 
         :returns: The report for debugging.
         """
-        return "Python SDK Debug Report:\n"\
-               "OS: {env}\n"\
-               "Python Version: {pyversion}\n"\
-               "Version of the API: 1.0.0\n"\
-               "SDK Package Version: 1.0.0".\
-               format(env=sys.platform, pyversion=sys.version)
+        return (
+            'Python SDK Debug Report:\n'
+            'OS: {env}\n'
+            'Python Version: {pyversion}\n'
+            'Version of the API: 1.0.0\n'
+            'SDK Package Version: 1.0.0'.format(
+                env=sys.platform, pyversion=sys.version
+            )
+        )

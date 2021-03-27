@@ -8,14 +8,14 @@ class OperationTrade(object):
         'trade_id': 'str',
         '_date': 'datetime',
         'price': 'float',
-        'quantity': 'int'
+        'quantity': 'int',
     }
 
     attribute_map: dict[str, str] = {
         'trade_id': 'tradeId',
         '_date': 'date',
         'price': 'price',
-        'quantity': 'quantity'
+        'quantity': 'quantity',
     }
 
     def __init__(self, trade_id=None, _date=None, price=None, quantity=None):
@@ -47,7 +47,9 @@ class OperationTrade(object):
         :type: str
         """
         if trade_id is None:
-            raise ValueError("Invalid value for `trade_id`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `trade_id`, must not be `None`'
+            )
 
         self._trade_id = trade_id
 
@@ -70,7 +72,7 @@ class OperationTrade(object):
          :type: datetime.datetime
         """
         if _date is None:
-            raise ValueError("Invalid value for `_date`, must not be `None`")
+            raise ValueError('Invalid value for `_date`, must not be `None`')
 
         self.__date = _date
 
@@ -91,7 +93,7 @@ class OperationTrade(object):
         :type: float
         """
         if price is None:
-            raise ValueError("Invalid value for `price`, must not be `None`")
+            raise ValueError('Invalid value for `price`, must not be `None`')
 
         self._price = price
 
@@ -112,7 +114,9 @@ class OperationTrade(object):
         :type: int
         """
         if quantity is None:
-            raise ValueError("Invalid value for `quantity`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `quantity`, must not be `None`'
+            )
 
         self._quantity = quantity
 
@@ -123,18 +127,23 @@ class OperationTrade(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

@@ -12,7 +12,7 @@ class PlacedMarketOrder(object):
         'message': 'str',
         'requested_lots': 'int',
         'executed_lots': 'int',
-        'commission': 'MoneyAmount'
+        'commission': 'MoneyAmount',
     }
 
     attribute_map: dict[str, str] = {
@@ -23,10 +23,20 @@ class PlacedMarketOrder(object):
         'message': 'message',
         'requested_lots': 'requestedLots',
         'executed_lots': 'executedLots',
-        'commission': 'commission'
+        'commission': 'commission',
     }
 
-    def __init__(self, order_id=None, operation=None, status=None, reject_reason=None, message=None, requested_lots=None, executed_lots=None, commission=None):
+    def __init__(
+        self,
+        order_id=None,
+        operation=None,
+        status=None,
+        reject_reason=None,
+        message=None,
+        requested_lots=None,
+        executed_lots=None,
+        commission=None,
+    ):
         """PlacedMarketOrder - a model defined in Swagger"""
         self._order_id = None
         self._operation = None
@@ -66,7 +76,9 @@ class PlacedMarketOrder(object):
         :type: str
         """
         if order_id is None:
-            raise ValueError("Invalid value for `order_id`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `order_id`, must not be `None`'
+            )
 
         self._order_id = order_id
 
@@ -87,7 +99,9 @@ class PlacedMarketOrder(object):
             The operation of this PlacedMarketOrder.
         """
         if operation is None:
-            raise ValueError("Invalid value for `operation`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `operation`, must not be `None`'
+            )
 
         self._operation = operation
 
@@ -108,7 +122,7 @@ class PlacedMarketOrder(object):
         :type: clients.tinkoff.models.OrderStatus
         """
         if status is None:
-            raise ValueError("Invalid value for `status`, must not be `None`")
+            raise ValueError('Invalid value for `status`, must not be `None`')
 
         self._status = status
 
@@ -169,7 +183,9 @@ class PlacedMarketOrder(object):
         :type: int
         """
         if requested_lots is None:
-            raise ValueError("Invalid value for `requested_lots`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `requested_lots`, must not be `None`'
+            )
 
         self._requested_lots = requested_lots
 
@@ -190,7 +206,9 @@ class PlacedMarketOrder(object):
         :type: int
         """
         if executed_lots is None:
-            raise ValueError("Invalid value for `executed_lots`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `executed_lots`, must not be `None`'
+            )
 
         self._executed_lots = executed_lots
 
@@ -220,18 +238,23 @@ class PlacedMarketOrder(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

@@ -15,7 +15,7 @@ class Orderbook(object):
         'last_price': 'float',
         'close_price': 'float',
         'limit_up': 'float',
-        'limit_down': 'float'
+        'limit_down': 'float',
     }
 
     attribute_map: dict[str, str] = {
@@ -29,10 +29,23 @@ class Orderbook(object):
         'last_price': 'lastPrice',
         'close_price': 'closePrice',
         'limit_up': 'limitUp',
-        'limit_down': 'limitDown'
+        'limit_down': 'limitDown',
     }
 
-    def __init__(self, figi=None, depth=None, bids=None, asks=None, trade_status=None, min_price_increment=None, face_value=None, last_price=None, close_price=None, limit_up=None, limit_down=None):
+    def __init__(
+        self,
+        figi=None,
+        depth=None,
+        bids=None,
+        asks=None,
+        trade_status=None,
+        min_price_increment=None,
+        face_value=None,
+        last_price=None,
+        close_price=None,
+        limit_up=None,
+        limit_down=None,
+    ):
         """Orderbook - a model defined in Swagger"""
         self._figi = None
         self._depth = None
@@ -80,7 +93,7 @@ class Orderbook(object):
         :type: str
         """
         if figi is None:
-            raise ValueError("Invalid value for `figi`, must not be `None`")
+            raise ValueError('Invalid value for `figi`, must not be `None`')
 
         self._figi = figi
 
@@ -101,7 +114,7 @@ class Orderbook(object):
         :type: int
         """
         if depth is None:
-            raise ValueError("Invalid value for `depth`, must not be `None`")
+            raise ValueError('Invalid value for `depth`, must not be `None`')
 
         self._depth = depth
 
@@ -122,7 +135,7 @@ class Orderbook(object):
         :type: list[clients.tinkoff.models.OrderResponse]
         """
         if bids is None:
-            raise ValueError("Invalid value for `bids`, must not be `None`")
+            raise ValueError('Invalid value for `bids`, must not be `None`')
 
         self._bids = bids
 
@@ -143,7 +156,7 @@ class Orderbook(object):
         :type: list[clients.tinkoff.models.OrderResponse]
         """
         if asks is None:
-            raise ValueError("Invalid value for `asks`, must not be `None`")
+            raise ValueError('Invalid value for `asks`, must not be `None`')
 
         self._asks = asks
 
@@ -164,7 +177,9 @@ class Orderbook(object):
         :type: clients.tinkoff.models.TradeStatus
         """
         if trade_status is None:
-            raise ValueError("Invalid value for `trade_status`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `trade_status`, must not be `None`'
+            )
 
         self._trade_status = trade_status
 
@@ -187,7 +202,9 @@ class Orderbook(object):
         :type: float
         """
         if min_price_increment is None:
-            raise ValueError("Invalid value for `min_price_increment`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `min_price_increment`, must not be `None`'
+            )
 
         self._min_price_increment = min_price_increment
 
@@ -299,18 +316,23 @@ class Orderbook(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

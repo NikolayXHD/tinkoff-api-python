@@ -4,15 +4,9 @@ import pprint
 
 
 class OrderResponse(object):
-    swagger_types: dict[str, str] = {
-        'price': 'float',
-        'quantity': 'int'
-    }
+    swagger_types: dict[str, str] = {'price': 'float', 'quantity': 'int'}
 
-    attribute_map: dict[str, str] = {
-        'price': 'price',
-        'quantity': 'quantity'
-    }
+    attribute_map: dict[str, str] = {'price': 'price', 'quantity': 'quantity'}
 
     def __init__(self, price=None, quantity=None):
         """OrderResponse - a model defined in Swagger"""
@@ -39,7 +33,7 @@ class OrderResponse(object):
         :type: float
         """
         if price is None:
-            raise ValueError("Invalid value for `price`, must not be `None`")
+            raise ValueError('Invalid value for `price`, must not be `None`')
 
         self._price = price
 
@@ -60,7 +54,9 @@ class OrderResponse(object):
         :type: int
         """
         if quantity is None:
-            raise ValueError("Invalid value for `quantity`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `quantity`, must not be `None`'
+            )
 
         self._quantity = quantity
 
@@ -71,18 +67,23 @@ class OrderResponse(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

@@ -6,12 +6,12 @@ import pprint
 class UserAccount(object):
     swagger_types: dict[str, str] = {
         'broker_account_type': 'BrokerAccountType',
-        'broker_account_id': 'str'
+        'broker_account_id': 'str',
     }
 
     attribute_map: dict[str, str] = {
         'broker_account_type': 'brokerAccountType',
-        'broker_account_id': 'brokerAccountId'
+        'broker_account_id': 'brokerAccountId',
     }
 
     def __init__(self, broker_account_type=None, broker_account_id=None):
@@ -39,7 +39,9 @@ class UserAccount(object):
         :type: clients.tinkoff.models.BrokerAccountType
         """
         if broker_account_type is None:
-            raise ValueError("Invalid value for `broker_account_type`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `broker_account_type`, must not be `None`'
+            )
 
         self._broker_account_type = broker_account_type
 
@@ -60,7 +62,9 @@ class UserAccount(object):
         :type: str
         """
         if broker_account_id is None:
-            raise ValueError("Invalid value for `broker_account_id`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `broker_account_id`, must not be `None`'
+            )
 
         self._broker_account_id = broker_account_id
 
@@ -71,18 +75,23 @@ class UserAccount(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

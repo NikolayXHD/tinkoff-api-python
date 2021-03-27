@@ -12,7 +12,7 @@ class Candle(object):
         'h': 'float',
         'l': 'float',
         'v': 'int',
-        'time': 'datetime'
+        'time': 'datetime',
     }
 
     attribute_map: dict[str, str] = {
@@ -23,10 +23,20 @@ class Candle(object):
         'h': 'h',
         'l': 'l',
         'v': 'v',
-        'time': 'time'
+        'time': 'time',
     }
 
-    def __init__(self, figi=None, interval=None, o=None, c=None, h=None, l=None, v=None, time=None):
+    def __init__(
+        self,
+        figi=None,
+        interval=None,
+        o=None,
+        c=None,
+        h=None,
+        l=None,
+        v=None,
+        time=None,
+    ):
         """Candle - a model defined in Swagger"""
         self._figi = None
         self._interval = None
@@ -63,7 +73,7 @@ class Candle(object):
         :type: str
         """
         if figi is None:
-            raise ValueError("Invalid value for `figi`, must not be `None`")
+            raise ValueError('Invalid value for `figi`, must not be `None`')
 
         self._figi = figi
 
@@ -84,7 +94,9 @@ class Candle(object):
             The interval of this Candle.
         """
         if interval is None:
-            raise ValueError("Invalid value for `interval`, must not be `None`")
+            raise ValueError(
+                'Invalid value for `interval`, must not be `None`'
+            )
 
         self._interval = interval
 
@@ -105,7 +117,7 @@ class Candle(object):
         :type: float
         """
         if o is None:
-            raise ValueError("Invalid value for `o`, must not be `None`")
+            raise ValueError('Invalid value for `o`, must not be `None`')
 
         self._o = o
 
@@ -126,7 +138,7 @@ class Candle(object):
         :type: float
         """
         if c is None:
-            raise ValueError("Invalid value for `c`, must not be `None`")
+            raise ValueError('Invalid value for `c`, must not be `None`')
 
         self._c = c
 
@@ -147,7 +159,7 @@ class Candle(object):
         :type: float
         """
         if h is None:
-            raise ValueError("Invalid value for `h`, must not be `None`")
+            raise ValueError('Invalid value for `h`, must not be `None`')
 
         self._h = h
 
@@ -168,7 +180,7 @@ class Candle(object):
         :type: float
         """
         if l is None:
-            raise ValueError("Invalid value for `l`, must not be `None`")
+            raise ValueError('Invalid value for `l`, must not be `None`')
 
         self._l = l
 
@@ -189,7 +201,7 @@ class Candle(object):
         :type: int
         """
         if v is None:
-            raise ValueError("Invalid value for `v`, must not be `None`")
+            raise ValueError('Invalid value for `v`, must not be `None`')
 
         self._v = v
 
@@ -212,7 +224,7 @@ class Candle(object):
          :type: datetime.datetime
         """
         if time is None:
-            raise ValueError("Invalid value for `time`, must not be `None`")
+            raise ValueError('Invalid value for `time`, must not be `None`')
 
         self._time = time
 
@@ -223,18 +235,23 @@ class Candle(object):
         for attr, _ in self.swagger_types.items():
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
-            elif hasattr(value, "to_dict"):
+                result[attr] = list(
+                    map(
+                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
+                        value,
+                    )
+                )
+            elif hasattr(value, 'to_dict'):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], 'to_dict')
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
         return result

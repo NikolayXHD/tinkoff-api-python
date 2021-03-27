@@ -4,5 +4,5 @@ import enum
 
 
 class BrokerAccountType(enum.Enum):
-    TINKOFF = "Tinkoff"
-    TINKOFFIIS = "TinkoffIis"
+    TINKOFF = 'Tinkoff'
+    TINKOFFIIS = 'TinkoffIis'

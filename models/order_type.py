@@ -4,5 +4,5 @@ import enum
 
 
 class OrderType(enum.Enum):
-    LIMIT = "Limit"
-    MARKET = "Market"
+    LIMIT = 'Limit'
+    MARKET = 'Market'

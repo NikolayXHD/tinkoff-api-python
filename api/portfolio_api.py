@@ -36,7 +36,7 @@ class PortfolioApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method portfolio_currencies_get" % key
+                    ' to method portfolio_currencies_get' % key
                 )
             params[key] = val
         del params['kwargs']
@@ -47,7 +47,9 @@ class PortfolioApi(object):
 
         query_params = []
         if 'broker_account_id' in params:
-            query_params.append(('brokerAccountId', params['broker_account_id']))
+            query_params.append(
+                ('brokerAccountId', params['broker_account_id'])
+            )
 
         header_params = {}
 
@@ -56,12 +58,14 @@ class PortfolioApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/portfolio/currencies', 'GET',
+            '/portfolio/currencies',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -73,7 +77,8 @@ class PortfolioApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
 
     def portfolio_get(self, **kwargs):
         """Получение портфеля клиента
@@ -101,7 +106,7 @@ class PortfolioApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method portfolio_get" % key
+                    ' to method portfolio_get' % key
                 )
             params[key] = val
         del params['kwargs']
@@ -112,7 +117,9 @@ class PortfolioApi(object):
 
         query_params = []
         if 'broker_account_id' in params:
-            query_params.append(('brokerAccountId', params['broker_account_id']))
+            query_params.append(
+                ('brokerAccountId', params['broker_account_id'])
+            )
 
         header_params = {}
 
@@ -121,12 +128,14 @@ class PortfolioApi(object):
 
         body_params = None
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
+            ['application/json']
+        )
 
         auth_settings = ['sso_auth']
 
         return self.api_client.call_api(
-            '/portfolio', 'GET',
+            '/portfolio',
+            'GET',
             path_params,
             query_params,
             header_params,
@@ -138,4 +147,5 @@ class PortfolioApi(object):
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            collection_formats=collection_formats,
+        )
