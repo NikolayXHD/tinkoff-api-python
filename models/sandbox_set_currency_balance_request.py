@@ -35,8 +35,8 @@ class SandboxSetCurrencyBalanceRequest(object):
     def currency(self, currency):
         """Sets the currency of this SandboxSetCurrencyBalanceRequest.
 
-        :param currency: The currency of this SandboxSetCurrencyBalanceRequest.
-        :type currency: clients.tinkoff.models.SandboxCurrency
+        :param clients.tinkoff.models.SandboxCurrency currency:
+            The currency of this SandboxSetCurrencyBalanceRequest.
         """
         if currency is None:
             raise ValueError("Invalid value for `currency`, must not be `None`")

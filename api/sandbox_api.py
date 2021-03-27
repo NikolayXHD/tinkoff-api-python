@@ -80,7 +80,7 @@ class SandboxApi(object):
     def sandbox_currencies_balance_post(self, body, **kwargs):
         """Выставление баланса по валютным позициям
 
-        :param SandboxSetCurrencyBalanceRequest body: Запрос на выставление баланса по валютным позициям (required)
+        :param models.SandboxSetCurrencyBalanceRequest body: Запрос на выставление баланса по валютным позициям (required)
         :param str broker_account_id: Номер счета (по умолчанию - Тинькофф)
         :rtype: None
         """
@@ -90,7 +90,7 @@ class SandboxApi(object):
     def sandbox_currencies_balance_post_with_http_info(self, body, **kwargs):
         """Выставление баланса по валютным позициям
 
-        :param SandboxSetCurrencyBalanceRequest body: Запрос на выставление баланса по валютным позициям (required)
+        :param models.SandboxSetCurrencyBalanceRequest body: Запрос на выставление баланса по валютным позициям (required)
         :param str broker_account_id: Номер счета (по умолчанию - Тинькофф)
         :rtype: None
         """
@@ -157,7 +157,7 @@ class SandboxApi(object):
     def sandbox_positions_balance_post(self, body, **kwargs):
         """Выставление баланса по инструментным позициям
 
-        :param SandboxSetPositionBalanceRequest body: Запрос на выставление
+        :param models.SandboxSetPositionBalanceRequest body: Запрос на выставление
                баланса по инструментным позициям (required)
         :param str broker_account_id: Номер счета (по умолчанию - Тинькофф)
         :rtype: None
@@ -168,7 +168,7 @@ class SandboxApi(object):
     def sandbox_positions_balance_post_with_http_info(self, body, **kwargs):
         """Выставление баланса по инструментным позициям
 
-        :param SandboxSetPositionBalanceRequest body: Запрос на выставление
+        :param models.SandboxSetPositionBalanceRequest body: Запрос на выставление
                баланса по инструментным позициям (required)
         :param str broker_account_id: Номер счета (по умолчанию - Тинькофф)
         :rtype: None
@@ -248,7 +248,7 @@ class SandboxApi(object):
         """Регистрация клиента в sandbox
 
         Создание счета и валютных позиций для клиента
-        :param SandboxRegisterRequest body: Запрос на создание счета и
+        :param models.SandboxRegisterRequest body: Запрос на создание счета и
                выставление баланса по валютным позициям
         :rtype: models.SandboxRegisterResponse
         """

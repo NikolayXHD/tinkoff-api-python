@@ -83,8 +83,8 @@ class PlacedMarketOrder(object):
     def operation(self, operation):
         """Sets the operation of this PlacedMarketOrder.
 
-        :param operation: The operation of this PlacedMarketOrder.
-        :type operation: clients.tinkoff.models.OperationType
+        :param clients.tinkoff.models.OperationType operation:
+            The operation of this PlacedMarketOrder.
         """
         if operation is None:
             raise ValueError("Invalid value for `operation`, must not be `None`")

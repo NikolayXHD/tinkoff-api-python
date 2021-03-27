@@ -192,8 +192,8 @@ class MarketInstrument(object):
     def currency(self, currency):
         """Sets the currency of this MarketInstrument.
 
-        :param currency: The currency of this MarketInstrument.
-        :type currency: clients.tinkoff.models.Currency
+        :param clients.tinkoff.models.Currency currency:
+            The currency of this MarketInstrument.
         """
 
         self._currency = currency
@@ -232,8 +232,8 @@ class MarketInstrument(object):
     def type(self, type):
         """Sets the type of this MarketInstrument.
 
-        :param type: The type of this MarketInstrument.
-        :type type: clients.tinkoff.models.InstrumentType
+        :param clients.tinkoff.models.InstrumentType type:
+            The type of this MarketInstrument.
         """
         if type is None:
             raise ValueError("Invalid value for `type`, must not be `None`")

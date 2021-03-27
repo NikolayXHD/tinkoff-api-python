@@ -35,8 +35,8 @@ class MoneyAmount(object):
     def currency(self, currency):
         """Sets the currency of this MoneyAmount.
 
-        :param currency: The currency of this MoneyAmount.
-        :type currency: clients.tinkoff.models.Currency
+        :param clients.tinkoff.models.Currency currency:
+            The currency of this MoneyAmount.
         """
         if currency is None:
             raise ValueError("Invalid value for `currency`, must not be `None`")

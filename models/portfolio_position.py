@@ -136,8 +136,8 @@ class PortfolioPosition(object):
     def instrument_type(self, instrument_type):
         """Sets the instrument_type of this PortfolioPosition.
 
-        :param instrument_type: The instrument_type of this PortfolioPosition.
-        :type instrument_type: clients.tinkoff.models.InstrumentType
+        :param clients.tinkoff.models.InstrumentType instrument_type:
+            The instrument_type of this PortfolioPosition.
         """
         if instrument_type is None:
             raise ValueError("Invalid value for `instrument_type`, must not be `None`")

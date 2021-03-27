@@ -83,8 +83,8 @@ class PlacedLimitOrder(object):
     def operation(self, operation):
         """Sets the operation of this PlacedLimitOrder.
 
-        :param operation: The operation of this PlacedLimitOrder.
-        :type operation: clients.tinkoff.models.OperationType
+        :param clients.tinkoff.models.OperationType operation:
+            The operation of this PlacedLimitOrder.
         """
         if operation is None:
             raise ValueError("Invalid value for `operation`, must not be `None`")

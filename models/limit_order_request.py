@@ -60,8 +60,8 @@ class LimitOrderRequest(object):
     def operation(self, operation):
         """Sets the operation of this LimitOrderRequest.
 
-        :param operation: The operation of this LimitOrderRequest.
-        :type operation: clients.tinkoff.models.OperationType
+        :param clients.tinkoff.models.OperationType operation:
+            The operation of this LimitOrderRequest.
         """
         if operation is None:
             raise ValueError("Invalid value for `operation`, must not be `None`")

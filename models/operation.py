@@ -172,8 +172,8 @@ class Operation(object):
     def currency(self, currency):
         """Sets the currency of this Operation.
 
-        :param currency: The currency of this Operation.
-        :type currency: clients.tinkoff.models.Currency
+        :param clients.tinkoff.models.Currency currency:
+            The currency of this Operation.
         """
         if currency is None:
             raise ValueError("Invalid value for `currency`, must not be `None`")
@@ -294,8 +294,8 @@ class Operation(object):
     def instrument_type(self, instrument_type):
         """Sets the instrument_type of this Operation.
 
-        :param instrument_type: The instrument_type of this Operation.
-        :type instrument_type: clients.tinkoff.models.InstrumentType
+        :param clients.tinkoff.models.InstrumentType instrument_type:
+            The instrument_type of this Operation.
         """
 
         self._instrument_type = instrument_type
@@ -357,8 +357,8 @@ class Operation(object):
     def operation_type(self, operation_type):
         """Sets the operation_type of this Operation.
 
-        :param operation_type: The operation_type of this Operation.
-        :type operation_type: clients.tinkoff.models.OperationTypeWithCommission
+        :param clients.tinkoff.models.OperationTypeWithCommission operation_type:
+            The operation_type of this Operation.
         """
 
         self._operation_type = operation_type

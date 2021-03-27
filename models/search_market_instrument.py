@@ -165,8 +165,8 @@ class SearchMarketInstrument(object):
     def currency(self, currency):
         """Sets the currency of this SearchMarketInstrument.
 
-        :param currency: The currency of this SearchMarketInstrument.
-        :type currency: clients.tinkoff.models.Currency
+        :param clients.tinkoff.models.Currency currency:
+            The currency of this SearchMarketInstrument.
         """
 
         self._currency = currency
@@ -205,8 +205,8 @@ class SearchMarketInstrument(object):
     def type(self, type):
         """Sets the type of this SearchMarketInstrument.
 
-        :param type: The type of this SearchMarketInstrument.
-        :type type: clients.tinkoff.models.InstrumentType
+        :param clients.tinkoff.models.InstrumentType type:
+            The type of this SearchMarketInstrument.
         """
         if type is None:
             raise ValueError("Invalid value for `type`, must not be `None`")

@@ -56,8 +56,8 @@ class MarketOrderRequest(object):
     def operation(self, operation):
         """Sets the operation of this MarketOrderRequest.
 
-        :param operation: The operation of this MarketOrderRequest.
-        :type operation: clients.tinkoff.models.OperationType
+        :param clients.tinkoff.models.OperationType operation:
+            The operation of this MarketOrderRequest.
         """
         if operation is None:
             raise ValueError("Invalid value for `operation`, must not be `None`")

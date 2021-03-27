@@ -80,8 +80,8 @@ class Candle(object):
     def interval(self, interval):
         """Sets the interval of this Candle.
 
-        :param interval: The interval of this Candle.
-        :type interval: clients.tinkoff.models.CandleResolution
+        :param clients.tinkoff.models.CandleResolution interval:
+            The interval of this Candle.
         """
         if interval is None:
             raise ValueError("Invalid value for `interval`, must not be `None`")

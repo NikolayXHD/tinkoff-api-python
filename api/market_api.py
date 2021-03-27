@@ -77,7 +77,7 @@ class MarketApi(object):
         :param str figi: FIGI (required)
         :param datetime.datetime _from: Начало временного промежутка (required)
         :param datetime.datetime to: Конец временного промежутка (required)
-        :param CandleResolution interval: Интервал свечи (required)
+        :param models.CandleResolution interval: Интервал свечи (required)
         :rtype: models.CandlesResponse
         """
         kwargs['_return_http_data_only'] = True

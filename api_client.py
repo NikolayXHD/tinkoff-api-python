@@ -308,11 +308,12 @@ class ApiClient(object):
         :param header_params: Header parameters to be
             placed in the request header.
         :param body: Request body.
-        :param post_params dict: Request post form parameters,
+        :param dict post_params: Request post form parameters,
             for `application/x-www-form-urlencoded`, `multipart/form-data`.
-        :param auth_settings list: Auth Settings names for the request.
-        :param response: Response data type.
-        :param files dict: key -> filename, value -> filepath,
+
+        :param list auth_settings: Auth Settings names for the request.
+        :param response_type: Response data type.
+        :param dict files: key -> filename, value -> filepath,
             for `multipart/form-data`.
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -634,8 +635,8 @@ class ApiClient(object):
                 ),
             )
 
-    def __hasattr(self, object, name):
-        return name in object.__class__.__dict__
+    def __hasattr(self, obj, name):
+        return name in obj.__class__.__dict__
 
     def __deserialize_model(self, data, klass):
         """Deserializes list or dict to model.
