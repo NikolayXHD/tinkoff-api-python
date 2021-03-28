@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-import pprint
+from . import _base
 
 
-class Orderbook(object):
+class Orderbook(_base.Model):
     swagger_types: dict[str, str] = {
         'figi': 'str',
         'depth': 'int',
@@ -46,7 +46,6 @@ class Orderbook(object):
         limit_up=None,
         limit_down=None,
     ):
-        """Orderbook - a model defined in Swagger"""
         self._figi = None
         self._depth = None
         self._bids = None
@@ -78,18 +77,15 @@ class Orderbook(object):
 
     @property
     def figi(self):
-        """Gets the figi of this Orderbook.
-
-        :returns: The figi of this Orderbook.
+        """
         :rtype: str
         """
         return self._figi
 
     @figi.setter
     def figi(self, figi):
-        """Sets the figi of this Orderbook.
-
-        :param str figi: The figi of this Orderbook.
+        """
+        :param str figi:
         """
         if figi is None:
             raise ValueError('Invalid value for `figi`, must not be `None`')
@@ -98,18 +94,15 @@ class Orderbook(object):
 
     @property
     def depth(self):
-        """Gets the depth of this Orderbook.
-
-        :returns: The depth of this Orderbook.
+        """
         :rtype: int
         """
         return self._depth
 
     @depth.setter
     def depth(self, depth):
-        """Sets the depth of this Orderbook.
-
-        :param int depth: The depth of this Orderbook.
+        """
+        :param int depth:
         """
         if depth is None:
             raise ValueError('Invalid value for `depth`, must not be `None`')
@@ -118,18 +111,15 @@ class Orderbook(object):
 
     @property
     def bids(self):
-        """Gets the bids of this Orderbook.
-
-        :returns: The bids of this Orderbook.
+        """
         :rtype: list[clients.tinkoff.models.OrderResponse]
         """
         return self._bids
 
     @bids.setter
     def bids(self, bids):
-        """Sets the bids of this Orderbook.
-
-        :param list[clients.tinkoff.models.OrderResponse] bids: The bids of this Orderbook.
+        """
+        :param list[clients.tinkoff.models.OrderResponse] bids:
         """
         if bids is None:
             raise ValueError('Invalid value for `bids`, must not be `None`')
@@ -138,18 +128,15 @@ class Orderbook(object):
 
     @property
     def asks(self):
-        """Gets the asks of this Orderbook.
-
-        :returns: The asks of this Orderbook.
+        """
         :rtype: list[clients.tinkoff.models.OrderResponse]
         """
         return self._asks
 
     @asks.setter
     def asks(self, asks):
-        """Sets the asks of this Orderbook.
-
-        :param list[clients.tinkoff.models.OrderResponse] asks: The asks of this Orderbook.
+        """
+        :param list[clients.tinkoff.models.OrderResponse] asks:
         """
         if asks is None:
             raise ValueError('Invalid value for `asks`, must not be `None`')
@@ -158,18 +145,15 @@ class Orderbook(object):
 
     @property
     def trade_status(self):
-        """Gets the trade_status of this Orderbook.
-
-        :returns: The trade_status of this Orderbook.
+        """
         :rtype: clients.tinkoff.models.TradeStatus
         """
         return self._trade_status
 
     @trade_status.setter
     def trade_status(self, trade_status):
-        """Sets the trade_status of this Orderbook.
-
-        :param clients.tinkoff.models.TradeStatus trade_status: The trade_status of this Orderbook.
+        """
+        :param clients.tinkoff.models.TradeStatus trade_status:
         """
         if trade_status is None:
             raise ValueError(
@@ -180,20 +164,17 @@ class Orderbook(object):
 
     @property
     def min_price_increment(self):
-        """Gets the min_price_increment of this Orderbook.
-
+        """
         Шаг цены
-        :returns: The min_price_increment of this Orderbook.
         :rtype: float
         """
         return self._min_price_increment
 
     @min_price_increment.setter
     def min_price_increment(self, min_price_increment):
-        """Sets the min_price_increment of this Orderbook.
-
+        """
         Шаг цены
-        :param float min_price_increment: The min_price_increment of this Orderbook.
+        :param float min_price_increment:
         """
         if min_price_increment is None:
             raise ValueError(
@@ -204,143 +185,76 @@ class Orderbook(object):
 
     @property
     def face_value(self):
-        """Gets the face_value of this Orderbook.
-
+        """
         Номинал для облигаций
-        :returns: The face_value of this Orderbook.
         :rtype: float
         """
         return self._face_value
 
     @face_value.setter
     def face_value(self, face_value):
-        """Sets the face_value of this Orderbook.
-
-        Номинал для облигаций
-        :param float face_value: The face_value of this Orderbook.
         """
-
+        Номинал для облигаций
+        :param float face_value:
+        """
         self._face_value = face_value
 
     @property
     def last_price(self):
-        """Gets the last_price of this Orderbook.
-
-        :returns: The last_price of this Orderbook.
+        """
         :rtype: float
         """
         return self._last_price
 
     @last_price.setter
     def last_price(self, last_price):
-        """Sets the last_price of this Orderbook.
-
-        :param float last_price: The last_price of this Orderbook.
         """
-
+        :param float last_price:
+        """
         self._last_price = last_price
 
     @property
     def close_price(self):
-        """Gets the close_price of this Orderbook.
-
-        :returns: The close_price of this Orderbook.
+        """
         :rtype: float
         """
         return self._close_price
 
     @close_price.setter
     def close_price(self, close_price):
-        """Sets the close_price of this Orderbook.
-
-        :param float close_price: The close_price of this Orderbook.
         """
-
+        :param float close_price:
+        """
         self._close_price = close_price
 
     @property
     def limit_up(self):
-        """Gets the limit_up of this Orderbook.
-
+        """
         Верхняя граница цены
-        :returns: The limit_up of this Orderbook.
         :rtype: float
         """
         return self._limit_up
 
     @limit_up.setter
     def limit_up(self, limit_up):
-        """Sets the limit_up of this Orderbook.
-
-        Верхняя граница цены
-        :param float limit_up: The limit_up of this Orderbook.
         """
-
+        Верхняя граница цены
+        :param float limit_up:
+        """
         self._limit_up = limit_up
 
     @property
     def limit_down(self):
-        """Gets the limit_down of this Orderbook.
-
+        """
         Нижняя граница цены
-        :returns: The limit_down of this Orderbook.
         :rtype: float
         """
         return self._limit_down
 
     @limit_down.setter
     def limit_down(self, limit_down):
-        """Sets the limit_down of this Orderbook.
-
-        Нижняя граница цены
-        :param float limit_down: The limit_down of this Orderbook.
         """
-
+        Нижняя граница цены
+        :param float limit_down:
+        """
         self._limit_down = limit_down
-
-    def to_dict(self):
-        """Returns the model properties as a dict"""
-        result = {}
-
-        for attr, _ in self.swagger_types.items():
-            value = getattr(self, attr)
-            if isinstance(value, list):
-                result[attr] = list(
-                    map(
-                        lambda x: x.to_dict() if hasattr(x, 'to_dict') else x,
-                        value,
-                    )
-                )
-            elif hasattr(value, 'to_dict'):
-                result[attr] = value.to_dict()
-            elif isinstance(value, dict):
-                result[attr] = dict(
-                    map(
-                        lambda item: (item[0], item[1].to_dict())
-                        if hasattr(item[1], 'to_dict')
-                        else item,
-                        value.items(),
-                    )
-                )
-            else:
-                result[attr] = value
-        return result
-
-    def to_str(self):
-        """Returns the string representation of the model"""
-        return pprint.pformat(self.to_dict())
-
-    def __repr__(self):
-        """For `print` and `pprint`"""
-        return self.to_str()
-
-    def __eq__(self, other):
-        """Returns true if both objects are equal"""
-        if not isinstance(other, Orderbook):
-            return False
-
-        return self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        """Returns true if both objects are not equal"""
-        return not self == other

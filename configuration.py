@@ -45,7 +45,7 @@ class Configuration(object, metaclass=TypeWithDefault):
         # Logging Settings
         self.logger = {
             'package_logger': logging.getLogger('clients.tinkoff'),
-            'urllib3_logger': logging.getLogger('urllib3')
+            'urllib3_logger': logging.getLogger('urllib3'),
         }
         # Log format
         self.logger_format = '%(asctime)s %(levelname)s %(message)s'

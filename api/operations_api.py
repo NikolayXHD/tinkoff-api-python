@@ -49,12 +49,14 @@ class OperationsApi(object):
         # verify the required parameter '_from' is set
         if '_from' not in params or params['_from'] is None:
             raise ValueError(
-                'Missing the required parameter `_from` when calling `operations_get`'
+                'Missing the required parameter `_from` when calling '
+                '`operations_get`'
             )
         # verify the required parameter 'to' is set
         if 'to' not in params or params['to'] is None:
             raise ValueError(
-                'Missing the required parameter `to` when calling `operations_get`'
+                'Missing the required parameter `to` when calling '
+                '`operations_get`'
             )
 
         collection_formats = {}

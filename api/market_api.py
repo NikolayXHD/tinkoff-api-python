@@ -118,22 +118,26 @@ class MarketApi(object):
         # verify the required parameter 'figi' is set
         if 'figi' not in params or params['figi'] is None:
             raise ValueError(
-                'Missing the required parameter `figi` when calling `market_candles_get`'
+                'Missing the required parameter `figi` when calling '
+                '`market_candles_get`'
             )
         # verify the required parameter '_from' is set
         if '_from' not in params or params['_from'] is None:
             raise ValueError(
-                'Missing the required parameter `_from` when calling `market_candles_get`'
+                'Missing the required parameter `_from` when calling '
+                '`market_candles_get`'
             )
         # verify the required parameter 'to' is set
         if 'to' not in params or params['to'] is None:
             raise ValueError(
-                'Missing the required parameter `to` when calling `market_candles_get`'
+                'Missing the required parameter `to` when calling '
+                '`market_candles_get`'
             )
         # verify the required parameter 'interval' is set
         if 'interval' not in params or params['interval'] is None:
             raise ValueError(
-                'Missing the required parameter `interval` when calling `market_candles_get`'
+                'Missing the required parameter `interval` when calling '
+                '`market_candles_get`'
             )
 
         collection_formats = {}
@@ -342,12 +346,14 @@ class MarketApi(object):
         # verify the required parameter 'figi' is set
         if 'figi' not in params or params['figi'] is None:
             raise ValueError(
-                'Missing the required parameter `figi` when calling `market_orderbook_get`'
+                'Missing the required parameter `figi` when calling '
+                '`market_orderbook_get`'
             )
         # verify the required parameter 'depth' is set
         if 'depth' not in params or params['depth'] is None:
             raise ValueError(
-                'Missing the required parameter `depth` when calling `market_orderbook_get`'
+                'Missing the required parameter `depth` when calling '
+                '`market_orderbook_get`'
             )
 
         collection_formats = {}
@@ -422,7 +428,8 @@ class MarketApi(object):
         # verify the required parameter 'figi' is set
         if 'figi' not in params or params['figi'] is None:
             raise ValueError(
-                'Missing the required parameter `figi` when calling `market_search_by_figi_get`'
+                'Missing the required parameter `figi` when calling '
+                '`market_search_by_figi_get`'
             )
 
         collection_formats = {}
@@ -497,7 +504,8 @@ class MarketApi(object):
         # verify the required parameter 'ticker' is set
         if 'ticker' not in params or params['ticker'] is None:
             raise ValueError(
-                'Missing the required parameter `ticker` when calling `market_search_by_ticker_get`'
+                'Missing the required parameter `ticker` when calling '
+                '`market_search_by_ticker_get`'
             )
 
         collection_formats = {}

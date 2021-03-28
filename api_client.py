@@ -308,7 +308,7 @@ class ApiClient(object):
         :param header_params: Header parameters to be
             placed in the request header.
         :param body: Request body.
-        :param dict post_params: Request post form parameters,
+        :param dict | list post_params: Request post form parameters,
             for `application/x-www-form-urlencoded`, `multipart/form-data`.
 
         :param list auth_settings: Auth Settings names for the request.

@@ -45,7 +45,8 @@ class OrdersApi(object):
         # verify the required parameter 'order_id' is set
         if 'order_id' not in params or params['order_id'] is None:
             raise ValueError(
-                'Missing the required parameter `order_id` when calling `orders_cancel_post`'
+                'Missing the required parameter `order_id` when calling '
+                '`orders_cancel_post`'
             )
 
         collection_formats = {}
@@ -198,12 +199,14 @@ class OrdersApi(object):
         # verify the required parameter 'body' is set
         if 'body' not in params or params['body'] is None:
             raise ValueError(
-                'Missing the required parameter `body` when calling `orders_limit_order_post`'
+                'Missing the required parameter `body` when calling '
+                '`orders_limit_order_post`'
             )
         # verify the required parameter 'figi' is set
         if 'figi' not in params or params['figi'] is None:
             raise ValueError(
-                'Missing the required parameter `figi` when calling `orders_limit_order_post`'
+                'Missing the required parameter `figi` when calling '
+                '`orders_limit_order_post`'
             )
 
         collection_formats = {}
@@ -259,7 +262,8 @@ class OrdersApi(object):
 
         :param models.MarketOrderRequest body: (required)
         :param str figi: FIGI инструмента (required)
-        :param str broker_account_id: Уникальный идентификатор счета (по умолчанию - Тинькофф)
+        :param str broker_account_id:
+        Уникальный идентификатор счета (по умолчанию - Тинькофф)
         :rtype: models.MarketOrderResponse
         """
         kwargs['_return_http_data_only'] = True
@@ -272,7 +276,8 @@ class OrdersApi(object):
 
         :param models.MarketOrderRequest body: (required)
         :param str figi: FIGI инструмента (required)
-        :param str broker_account_id: Уникальный идентификатор счета (по умолчанию - Тинькофф)
+        :param str broker_account_id:
+        Уникальный идентификатор счета (по умолчанию - Тинькофф)
         :rtype: models.MarketOrderResponse
         """
 
@@ -293,12 +298,14 @@ class OrdersApi(object):
         # verify the required parameter 'body' is set
         if 'body' not in params or params['body'] is None:
             raise ValueError(
-                'Missing the required parameter `body` when calling `orders_market_order_post`'
+                'Missing the required parameter `body` when calling '
+                '`orders_market_order_post`'
             )
         # verify the required parameter 'figi' is set
         if 'figi' not in params or params['figi'] is None:
             raise ValueError(
-                'Missing the required parameter `figi` when calling `orders_market_order_post`'
+                'Missing the required parameter `figi` when calling '
+                '`orders_market_order_post`'
             )
 
         collection_formats = {}

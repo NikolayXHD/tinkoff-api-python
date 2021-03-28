@@ -85,7 +85,8 @@ class SandboxApi(object):
     def sandbox_currencies_balance_post(self, body, **kwargs):
         """Выставление баланса по валютным позициям
 
-        :param models.SandboxSetCurrencyBalanceRequest body: Запрос на выставление баланса по валютным позициям (required)
+        :param models.SandboxSetCurrencyBalanceRequest body:
+        Запрос на выставление баланса по валютным позициям (required)
         :param str broker_account_id: Номер счета (по умолчанию - Тинькофф)
         :rtype: None
         """
@@ -97,7 +98,8 @@ class SandboxApi(object):
     def sandbox_currencies_balance_post_with_http_info(self, body, **kwargs):
         """Выставление баланса по валютным позициям
 
-        :param models.SandboxSetCurrencyBalanceRequest body: Запрос на выставление баланса по валютным позициям (required)
+        :param models.SandboxSetCurrencyBalanceRequest body:
+        Запрос на выставление баланса по валютным позициям (required)
         :param str broker_account_id: Номер счета (по умолчанию - Тинькофф)
         :rtype: None
         """
@@ -119,7 +121,8 @@ class SandboxApi(object):
         # verify the required parameter 'body' is set
         if 'body' not in params or params['body'] is None:
             raise ValueError(
-                'Missing the required parameter `body` when calling `sandbox_currencies_balance_post`'
+                'Missing the required parameter `body` when calling '
+                '`sandbox_currencies_balance_post`'
             )
 
         collection_formats = {}
@@ -171,8 +174,8 @@ class SandboxApi(object):
     def sandbox_positions_balance_post(self, body, **kwargs):
         """Выставление баланса по инструментным позициям
 
-        :param models.SandboxSetPositionBalanceRequest body: Запрос на выставление
-               баланса по инструментным позициям (required)
+        :param models.SandboxSetPositionBalanceRequest body:
+        Запрос на выставление баланса по инструментным позициям (required)
         :param str broker_account_id: Номер счета (по умолчанию - Тинькофф)
         :rtype: None
         """
@@ -184,8 +187,8 @@ class SandboxApi(object):
     def sandbox_positions_balance_post_with_http_info(self, body, **kwargs):
         """Выставление баланса по инструментным позициям
 
-        :param models.SandboxSetPositionBalanceRequest body: Запрос на выставление
-               баланса по инструментным позициям (required)
+        :param models.SandboxSetPositionBalanceRequest body:
+        Запрос на выставление баланса по инструментным позициям (required)
         :param str broker_account_id: Номер счета (по умолчанию - Тинькофф)
         :rtype: None
         """
@@ -207,7 +210,8 @@ class SandboxApi(object):
         # verify the required parameter 'body' is set
         if 'body' not in params or params['body'] is None:
             raise ValueError(
-                'Missing the required parameter `body` when calling `sandbox_positions_balance_post`'
+                'Missing the required parameter `body` when calling '
+                '`sandbox_positions_balance_post`'
             )
 
         collection_formats = {}
