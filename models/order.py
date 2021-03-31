@@ -34,7 +34,7 @@ class Order(_base.Model):
         status=None,
         requested_lots=None,
         executed_lots=None,
-        order_type=None,
+        type=None,
         price=None,
     ):
         self._order_id = None
@@ -52,7 +52,7 @@ class Order(_base.Model):
         self.status = status
         self.requested_lots = requested_lots
         self.executed_lots = executed_lots
-        self.type = order_type
+        self.type = type
         self.price = price
 
     @property

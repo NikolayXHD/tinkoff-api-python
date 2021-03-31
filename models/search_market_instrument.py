@@ -35,7 +35,7 @@ class SearchMarketInstrument(_base.Model):
         lot=None,
         currency=None,
         name=None,
-        instr_type=None,
+        type=None,
     ):
         self._figi = None
         self._ticker = None
@@ -56,7 +56,7 @@ class SearchMarketInstrument(_base.Model):
         if currency is not None:
             self.currency = currency
         self.name = name
-        self.type = instr_type
+        self.type = type
 
     @property
     def figi(self):
