@@ -4,13 +4,13 @@ import enum
 
 
 class CandleResolution(enum.Enum):
-    _1MIN = '1min'
-    _2MIN = '2min'
-    _3MIN = '3min'
-    _5MIN = '5min'
-    _10MIN = '10min'
-    _15MIN = '15min'
-    _30MIN = '30min'
+    MIN_1 = '1min'
+    MIN_2 = '2min'
+    MIN_3 = '3min'
+    MIN_5 = '5min'
+    MIN_10 = '10min'
+    MIN_15 = '15min'
+    MIN_30 = '30min'
     HOUR = 'hour'
     DAY = 'day'
     WEEK = 'week'
