@@ -1,6 +1,3 @@
-# flake8: noqa
-
-# import apis into api package
 from .market_api import MarketApi
 from .operations_api import OperationsApi
 from .orders_api import OrdersApi
