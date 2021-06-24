@@ -130,7 +130,7 @@ class RESTClientObject(object):
 
         timeout = None
         if _request_timeout:
-            if isinstance(_request_timeout, (int,)):
+            if isinstance(_request_timeout, int):
                 timeout = urllib3.Timeout(total=_request_timeout)
             elif (
                 isinstance(_request_timeout, tuple)
